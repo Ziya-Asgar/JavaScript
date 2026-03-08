@@ -6,19 +6,6 @@
   - [Useful Links](#useful-links)
   - [`use strict`](#use-strict)
   - [String Methods](#string-methods)
-    - [Define a string and access characters](#define-a-string-and-access-characters)
-    - [Turning the string into upper or lower case](#turning-the-string-into-upper-or-lower-case)
-    - [`.length`](#length)
-    - [`.indexOf()`](#indexof)
-    - [`.lastIndexOf()`](#lastindexof)
-    - [`.includes()`](#includes)
-    - [`.startsWith()`, `.endsWith()`](#startswith-endswith)
-    - [`.slice()`](#slice)
-    - [`.substring()`](#substring)
-    - [`.substr()`](#substr)
-    - [`.split()`](#split)
-    - [`.trim()`](#trim)
-    - [Looping through strings](#looping-through-strings)
   - [Number Methods](#number-methods)
     - [`.toFixed()`](#tofixed)
     - [define numbers using `e`](#define-numbers-using-e)
@@ -122,7 +109,7 @@
     - [`.concat()`](#concat)
     - [`.forEach()`](#foreach)
     - [`.indexOf()` and `.lastIndexOf`](#indexof-and-lastindexof)
-    - [`.includes()`](#includes-1)
+    - [`.includes()`](#includes)
     - [`.find()`](#find)
     - [`.findIndex()` and `.findLastIndex`](#findindex-and-findlastindex)
     - [`.filter()`](#filter)
@@ -437,220 +424,7 @@ To invoke strict mode for an entire script, put the exact statement `"use strict
 
 ## String Methods
 
-### Define a string and access characters
-
-Here is an easy way to define a string:
-
-```js
-const str = `This is a string`;
-```
-
-<hr>
-
-Accessing different characters of a string:
-
-```js
-const str = `This is a string`;
-
-str[0]; // T
-
-str.at(0); // default is zero. T
-
-str.charAt(); // default is zero. T
-```
-
-<hr>
-
-### Turning the string into upper or lower case
-
-Turning the string into upper or lower case:
-
-```js
-const str = `This is a string`;
-
-str.toUpperCase(); // THIS IS A STRING
-
-str.toLowerCase(); // this is a string
-```
-
-<hr>
-
-### `.length`
-
-`length` returns the number of characters in a string:
-
-```js
-const str = `This is a string`;
-
-str.length; // 16
-```
-
-<hr>
-
-### `.indexOf()`
-
-`indexOf(<characters>, [optional position number])` returns the position of the first occurrence of a substring from a specified position number. Returns `-1` when can't find the string.
-
-```js
-const str = `This is a string`;
-
-str.indexOf("is"); // 2
-
-str.indexOf("is", 3); // 5
-
-str.indexOf("is", 6); // -1
-```
-
-<hr>
-
-### `.lastIndexOf()`
-
-`lastIndexOf(<characters>, [optional position number])` similar to `indexOf`, but searches from right to left. Returns the position of the first occurrence of a substring from a specified position number. Returns `-1` when can't find the string.
-
-```js
-const str = `This is a string`;
-
-str.lastIndexOf("is"); // 5
-
-str.lastIndexOf("is", 4); // 2
-```
-
-<hr>
-
-### `.includes()`
-
-`includes(<characters>, [optional position number])` searches for characters in a given string, and returns `true` or `false`. It starts the search from an optional position number if provided.
-
-```js
-const str = `This is a string`;
-
-str.includes("is"); // true
-str.includes("is", 6); // false
-```
-
-<hr>
-
-### `.startsWith()`, `.endsWith()`
-
-`startsWith(<characters>)` checks if a string starts with given characters. Returns `true` or `false`. It's case sensitive:
-
-```js
-const str = `This is a string`;
-
-str.startsWith("This"); // true
-str.startsWith("this"); // false
-```
-
-`endsWith(<characters>)` checks if a string ends with given characters. Returns `true` or `false`. It's case sensitive:
-
-```js
-const str = `This is a string`;
-
-str.endsWith("string"); // true
-str.endsWith("String"); // false
-```
-
-<hr>
-
-### `.slice()`
-
-`slice(<start>, <end>)` returns a section of a string based on given start, and end positions:
-
-```js
-const str = `This is a string`;
-
-str.slice(); // This is a string
-str.slice(0); // This is a string
-str.slice(0, 4); // This
-str.slice(-6, -1); // strin
-str.slice(-6); // string
-
-str.slice(5, 2); // nothing is returned, as the end position number is smaller than the start position number
-```
-
-<hr>
-
-### `.substring()`
-
-`substring(<start> or <end>, <end> or <start>)` returns a section of a string based on given start, and end positions. Unlike `slice`, the end position provided to `substring` can be lower than the start position. Also, if either or both of the arguments to `substring()` are negative or `NaN`, the `substring()` method treats them as if they were 0:
-
-```js
-const str = `This is a string`;
-
-str.substring(); // This is a string
-str.substring(0); // This is a string
-str.substring(2, 9); // is is a
-str.substring(9, 2); // is is a.
-
-str.substring(-5, -2); // nothing is returned
-```
-
-<hr>
-
-### `.substr()`
-
-`substr(<start>, <number of characters>)` returns a section of a string at the specified location and having the specified length. Negative lengths in `substr()` are treated as zero. This method is deprecated, and is not advised to be used.
-
-```js
-const str = `This is a string`;
-
-str.substr(); // This is a string
-str.substr(0); // This is a string
-str.substr(5, 4); // is a
-str.substr(-4, 4); // ring
-
-str.substr(-4, -4); // nothing is returned
-```
-
-<hr>
-
-### `.split()`
-
-`split(<delimiter> [, <limit>])` returns a string split by a provided delimiter. If you provide a number to `split` as a second argument, it will return the limited number of split items in the resulting array:
-
-```js
-const str = `This is a string`;
-
-str.split(); // ['This is a string']
-str.split(" "); // ['This', 'is', 'a', 'string']
-str.split(" ", 2); // ['This', 'is']
-str.split(""); // ['T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 's', 't', 'r', 'i', 'n', 'g']
-str.split("is"); // ['Th', ' ', ' a string']
-```
-
-<hr>
-
-### `.trim()`
-
-The `trim()` method removes whitespace from both ends of a string without modifying the original string.:
-
-```js
-const sentence = "   JavaScript is amazing!   ";
-
-console.log(sentence.trim()); // JavaScript is amazing!
-```
-
-<hr>
-
-### Looping through strings
-
-You can loop through strings:
-
-```js
-const str = `This is a string`;
-
-for (let char of str) {
-  console.log(char);
-}
-```
-
-```js
-const str = `This is a string`;
-
-for (let charIndex = 0; charIndex < str.length; charIndex++) {
-  console.log(str[charIndex]);
-}
-```
+[String Methods](./JS_StringMethods.md)
 
 <hr>
 <hr>
@@ -976,10 +750,10 @@ const resultOfConditions =
   condition1 === condition2
     ? `Equal`
     : condition1 < condition2
-    ? `Less`
-    : condition1 > condition2
-    ? `More`
-    : `None is true`;
+      ? `Less`
+      : condition1 > condition2
+        ? `More`
+        : `None is true`;
 
 console.log(resultOfConditions); // More
 ```
@@ -1141,7 +915,7 @@ There are several ways to create a function:
 ```js
 function declaration() {
   console.log(
-    `This type of creating a function is called function declaration`
+    `This type of creating a function is called function declaration`,
   );
   // you don't need ; after a function declaration
 }
@@ -1154,7 +928,7 @@ declaration();
 ```js
 const functionName = function () {
   console.log(
-    `This type of creating a function is called a function expression`
+    `This type of creating a function is called a function expression`,
   );
 };
 
@@ -1194,7 +968,7 @@ console.log(multilineArrowFunction);
 
    ```js
    const functionName = new Function(
-     `console.log("this is a code inside the function")`
+     `console.log("this is a code inside the function")`,
    );
 
    functionName();
@@ -1204,7 +978,7 @@ console.log(multilineArrowFunction);
    const functionName = new Function(
      "parameter1",
      "parameter2",
-     "return parameter1 + parameter2"
+     "return parameter1 + parameter2",
    );
 
    console.log(functionName(1, 2)); // 3
@@ -1264,7 +1038,7 @@ We can use the `...` operator together with other parameters as well:
 ```js
 function twoParametersAndTheRest(parameter1, parameter2, ...theRest) {
   console.log(
-    `Here is parameter1: ${parameter1},\nhere is parameter2: ${parameter2},\nand here are the rest of the parameters: ${theRest}`
+    `Here is parameter1: ${parameter1},\nhere is parameter2: ${parameter2},\nand here are the rest of the parameters: ${theRest}`,
   );
 
   return theRest;
@@ -1287,7 +1061,7 @@ function accessingAllArguments() {
   console.log(`${arguments} is an array-like object`);
   console.log(`${arguments[0]} is the first argument of the function`);
   console.log(
-    `${arguments.length} is the number of arguments called with the function`
+    `${arguments.length} is the number of arguments called with the function`,
   );
 }
 
@@ -2050,7 +1824,7 @@ const obj = {
 
 const copyOfObjectWithFlags = Object.defineProperties(
   {},
-  Object.getOwnPropertyDescriptors(obj)
+  Object.getOwnPropertyDescriptors(obj),
 );
 ```
 
@@ -2293,7 +2067,7 @@ console.log(Object.getPrototypeOf(obj)); // {prototypeValue1: 'prototypeValue1'}
 
 const powerfulCopyOfObj = Object.create(
   Object.getPrototypeOf(obj),
-  Object.getOwnPropertyDescriptors(Prototype1)
+  Object.getOwnPropertyDescriptors(Prototype1),
 );
 
 console.log(Object.getPrototypeOf(powerfulCopyOfObj)); // {prototypeValue1: 'prototypeValue1'}
@@ -2797,7 +2571,7 @@ const arr = ["value1", "value2", "value3"];
 
 arr.forEach((item, index, array) => {
   console.log(
-    `${item} is at index ${index} in an array with these items: ${array}`
+    `${item} is at index ${index} in an array with these items: ${array}`,
   );
 });
 ```
@@ -4828,7 +4602,7 @@ const promise = new Promise(function (resolve, reject) {
   },
   function (error) {
     console.log(`error is ${error}`);
-  }
+  },
 );
 ```
 
@@ -4844,7 +4618,7 @@ const promise = new Promise(function (resolve, reject) {
   },
   function (error) {
     console.log(`error is ${error}`);
-  }
+  },
 );
 ```
 
@@ -4873,7 +4647,7 @@ promise.then(
   },
   function (error) {
     console.log(`error is ${error}`);
-  } // doesn't run because promise is not rejected
+  }, // doesn't run because promise is not rejected
 );
 ```
 
@@ -4889,7 +4663,7 @@ promise.then(
   },
   function (error) {
     console.log(`error is ${error}`); // "Custom Error Message" after 1 second
-  }
+  },
 );
 ```
 
@@ -4920,7 +4694,7 @@ const promise = new Promise(function (resolve, reject) {
   })
   .then(function (result) {
     console.log(
-      `This is from the second "then". This is what was returned from the first "then": ${result}`
+      `This is from the second "then". This is what was returned from the first "then": ${result}`,
     );
   });
 ```
@@ -4939,7 +4713,7 @@ promise.then(
   null, // doesn't run
   function (error) {
     console.log(`error: ${error}`);
-  }
+  },
 );
 ```
 
@@ -5056,7 +4830,7 @@ Promise.all(arrOfPromises)
 const arrOfPromises = [
   new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),
   new Promise((resolve, reject) =>
-    setTimeout(() => reject(new Error("Rejected with an Error")), 1500)
+    setTimeout(() => reject(new Error("Rejected with an Error")), 1500),
   ),
   new Promise((resolve, reject) => setTimeout(() => resolve(3), 2000)),
 ];
@@ -5093,7 +4867,7 @@ Promise.all([
 const arrOfPromises = [
   new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),
   new Promise((resolve, reject) =>
-    setTimeout(() => reject(new Error("Rejected with an Error")), 1500)
+    setTimeout(() => reject(new Error("Rejected with an Error")), 1500),
   ),
   new Promise((resolve, reject) => setTimeout(() => resolve(3), 2000)),
 ];
@@ -5111,7 +4885,7 @@ Promise.allSettled(arrOfPromises).then(console.log);
 const arrOfPromises = [
   new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),
   new Promise((resolve, reject) =>
-    setTimeout(() => reject(new Error("Rejected with an Error")), 1500)
+    setTimeout(() => reject(new Error("Rejected with an Error")), 1500),
   ),
   new Promise((resolve, reject) => setTimeout(() => resolve(3), 2000)),
 ];
@@ -5129,7 +4903,7 @@ Promise.race(arrOfPromises).then(console.log);
 const arrOfPromises = [
   new Promise((resolve, reject) => setTimeout(() => resolve(1), 1000)),
   new Promise((resolve, reject) =>
-    setTimeout(() => reject(new Error("Rejected with an Error")), 1500)
+    setTimeout(() => reject(new Error("Rejected with an Error")), 1500),
   ),
   new Promise((resolve, reject) => setTimeout(() => resolve(3), 2000)),
 ];
@@ -5430,7 +5204,6 @@ In a module, top-level `this` is undefined. In non-module scripts, `this` is a g
 There are several browser-specific differences of scripts with `type="module"` compared to regular scripts.
 
 - Module scripts are always deferred, same effect as `defer` attribute, for both external and inline scripts.
-
   - downloading external module scripts `<script type="module" src="...">` doesn’t block HTML processing, they load in parallel with other resources.
   - module scripts wait until the HTML document is fully ready, and then run.
   - relative order of scripts is maintained: scripts that go first in the document, execute first.
@@ -5472,10 +5245,10 @@ Old browsers do not understand `type="module"`. Scripts of an unknown type are j
 
 <script nomodule>
   console.log(
-    "Modern browsers know both type=module and nomodule, so skip this"
+    "Modern browsers know both type=module and nomodule, so skip this",
   );
   console.log(
-    "Old browsers ignore script with unknown type=module, but execute this."
+    "Old browsers ignore script with unknown type=module, but execute this.",
   );
 </script>
 ```
@@ -7028,7 +6801,7 @@ To create a text node, we use `document.createTextNode("<text>");`
   <script src="./index.js"></script>
   <script>
     const newTextNode = document.createTextNode(
-      "This is a text node, which is not yet added to the webpage"
+      "This is a text node, which is not yet added to the webpage",
     );
     console.log(newTextNode); // #text "This is a text node, which is not yet added to the webpage"
   </script>
@@ -7056,7 +6829,7 @@ There are various methods to add elements and nodes to the DOM:
     console.log(document.body.children); // HTMLCollection { ...length: 3 }
 
     const newTextNode = document.createTextNode(
-      "This text node is added to the webpage with JS"
+      "This text node is added to the webpage with JS",
     );
     const newParagraphElem = document.createElement("p");
     newParagraphElem.textContent =
@@ -7085,7 +6858,7 @@ There are various methods to add elements and nodes to the DOM:
     const existingParagraphElem = document.querySelector("p");
 
     const newTextNode = document.createTextNode(
-      "This text node is added to the webpage with JS"
+      "This text node is added to the webpage with JS",
     );
     const newParagraphElem = document.createElement("p");
     newParagraphElem.textContent =
@@ -7137,7 +6910,7 @@ To insert an HTML string “as html”, with all tags and stuff working, we can 
     const divElement = document.querySelector("div");
     divElement.insertAdjacentHTML(
       "beforebegin",
-      "<p>added before the DIV element</p>"
+      "<p>added before the DIV element</p>",
     );
 
     console.log(document.body.children); // HTMLCollection { 0: p, 1: div, ...length: 4 }
@@ -7158,7 +6931,7 @@ To insert an HTML string “as html”, with all tags and stuff working, we can 
     const divElement = document.querySelector("div");
     divElement.insertAdjacentHTML(
       "afterbegin",
-      "<p>added into the beginning of the DIV element</p>"
+      "<p>added into the beginning of the DIV element</p>",
     );
 
     console.log(document.body.children); // HTMLCollection { 0: div, ...length: 3 }
@@ -7179,7 +6952,7 @@ To insert an HTML string “as html”, with all tags and stuff working, we can 
     const divElement = document.querySelector("div");
     divElement.insertAdjacentHTML(
       "beforeend",
-      "<p>added into the end of the DIV element</p>"
+      "<p>added into the end of the DIV element</p>",
     );
 
     console.log(document.body.children); // HTMLCollection { 0: div, ...length: 3 }
@@ -7200,7 +6973,7 @@ To insert an HTML string “as html”, with all tags and stuff working, we can 
     const divElement = document.querySelector("div");
     divElement.insertAdjacentHTML(
       "afterend",
-      "<p>added after the DIV element</p>"
+      "<p>added after the DIV element</p>",
     );
 
     console.log(document.body.children); // HTMLCollection { 0: div, 1: p, ...length: 4 }
@@ -7705,13 +7478,13 @@ Pointer event is newer and should be used instead of mouse events.
 
     section.addEventListener("pointerover", () => {
       console.log(
-        "hovering over the section. Happens each time when you bring the cursor over the section. Even if you hover over the element within the section and then over the section itself"
+        "hovering over the section. Happens each time when you bring the cursor over the section. Even if you hover over the element within the section and then over the section itself",
       );
     });
 
     section.addEventListener("pointermove", () => {
       console.log(
-        "moving the cursor within the section, including the elements within the section"
+        "moving the cursor within the section, including the elements within the section",
       );
     });
 
@@ -7721,7 +7494,7 @@ Pointer event is newer and should be used instead of mouse events.
 
     section.addEventListener("pointerenter", () => {
       console.log(
-        "enter into the section. Happens each time when you get the cursor into the section. Unlike, 'pointerover' doesn't fire when you enter the section, then hover over the element within the section, and then hover over the section again"
+        "enter into the section. Happens each time when you get the cursor into the section. Unlike, 'pointerover' doesn't fire when you enter the section, then hover over the element within the section, and then hover over the section again",
       );
     });
 
@@ -7809,13 +7582,13 @@ Mouse events:
 
     section.addEventListener("mouseover", () => {
       console.log(
-        "hovering over the section. Happens each time when you bring the cursor over the section. Even if you hover over the element within the section and then over the section itself"
+        "hovering over the section. Happens each time when you bring the cursor over the section. Even if you hover over the element within the section and then over the section itself",
       );
     });
 
     section.addEventListener("mousemove", () => {
       console.log(
-        "moving the cursor within the section, including the elements within the section"
+        "moving the cursor within the section, including the elements within the section",
       );
     });
 
@@ -7825,7 +7598,7 @@ Mouse events:
 
     section.addEventListener("mouseenter", () => {
       console.log(
-        "enter into the section. Happens each time when you get the cursor into the section. Unlike, 'mouseover' doesn't fire when you enter the section, then hover over the element within the section, and then hover over the section again"
+        "enter into the section. Happens each time when you get the cursor into the section. Unlike, 'mouseover' doesn't fire when you enter the section, then hover over the element within the section, and then hover over the section again",
       );
     });
 
@@ -8868,7 +8641,7 @@ if ("caches" in window) {
         console.log("Data was added to cache");
       })
       .catch((error) =>
-        console.error("Error while adding data to cache:", error)
+        console.error("Error while adding data to cache:", error),
       );
   };
 
@@ -8899,7 +8672,7 @@ if ("caches" in window) {
         console.log("Data was added to cache");
       })
       .catch((error) =>
-        console.error("Error while adding data to cache:", error)
+        console.error("Error while adding data to cache:", error),
       );
   };
 
@@ -8943,8 +8716,8 @@ const cacheStuff = async () => {
     .put(
       "./file.json",
       new Response(
-        '{"changedKey1": "changedValue1", "changedKey2": "changedValue2"}'
-      )
+        '{"changedKey1": "changedValue1", "changedKey2": "changedValue2"}',
+      ),
     )
     .then(() => console.log("Data added to cache."))
     .catch((error) => console.error("Error adding data to cache:", error));
@@ -10055,8 +9828,8 @@ console.log("Name Surname".replace(/(Name)\s(Surname)/, "$2, $1")); // Surname, 
 console.log(
   "Name Surname".replace(
     /(?<firstName>Name)\s(?<lastName>Surname)/,
-    "$<lastName>, $<firstName>"
-  )
+    "$<lastName>, $<firstName>",
+  ),
 ); // Surname, Name
 ```
 
@@ -11014,15 +10787,15 @@ console.log(shortStr.replace(/(This) (is)/, "$2 $1")); // is This a short text. 
 console.log(
   shortStr.replace(
     /(?<firstWord>This) (?<secondWord>is)/,
-    "$<secondWord> $<firstWord>"
-  )
+    "$<secondWord> $<firstWord>",
+  ),
 ); // is This a short text. `$<firstWord>` is (This) and `$<secondWord>` is (is).
 
 // `replace` accepts a function whose return value will be used as a replacement
 console.log(
   "A\nB\nC".replace(/A/, function (match, offset, string) {
     return `Return from func: match: ${match}, offset: ${offset}, input string: ${string}. The End.`;
-  })
+  }),
 );
 /* Return from func: match: A, offset: 0, input string: A
 B
@@ -11034,7 +10807,7 @@ C */
 console.log(
   "A\nB\nC".replace(/(A)/, function (match, p1, offset, string) {
     return `Return from func: match: ${match}, capturing group: ${p1}, offset: ${offset}, input string: ${string}. The End.`;
-  })
+  }),
 );
 /* Return from func: match: A, capturing group: A, offset: 0, input string: A
 B
@@ -11046,7 +10819,7 @@ C */
 console.log(
   "A\nB\nC".replace(/(A)\n(B)/, function (match, p1, p2, offset, string) {
     return `Return from func: match: ${match}, capturing group 1: ${p1}, capturing group 2: ${p2}, offset: ${offset}, input string: ${string}. The End.`;
-  })
+  }),
 );
 /* Return from func: match: A
 B, capturing group 1: A, capturing group 2: B, offset: 0, input string: A
@@ -11479,7 +11252,6 @@ console.log(arr.byteLength); // 8 (size in bytes), 4 integers - 64-bit, 64 / 8-b
 We can create a typed array directly, without mentioning `ArrayBuffer`. But a view cannot exist without an underlying `ArrayBuffer`, so it gets created automatically in all these cases except the first one (when provided).
 
 - To access the underlying `ArrayBuffer`, there are following properties in TypedArray:
-
   - `buffer` – references the `ArrayBuffer`.
   - `byteLength` – the length of the `ArrayBuffer`.
 
@@ -11550,14 +11322,12 @@ dataView.setUint32(0, 0); // set 4-byte number to zero, thus setting all bytes t
 What if the binary data is actually a string? The built-in `TextDecoder` object allows one to read the value into an actual JavaScript string, given the buffer and the encoding.
 
 - We first need to create it with `new TextDecoder([<encoding>], [<options>])`
-
   - `<encoding>` – `utf-8` by default, but `big5`, `windows-1251` and others are also supported.
   - `<options>` – optional object:
     - `fatal` – boolean, if `true` then throw an exception for invalid (non-decodable) characters, otherwise (default) replace them with character \uFFFD.
     - `ignoreBOM` – boolean, if `true` then ignore BOM (an optional byte-order Unicode mark), rarely needed.
 
 - After creating the `TextDecoder`, we can decode with `.decode([<input>], [<options>])`
-
   - `<input>` – BufferSource to decode.
   - `<options>` – optional object:
     - `stream` – true for decoding streams, when decoder is called repeatedly with incoming chunks of data. In that case a multi-byte character may occasionally split between chunks. This option tells `TextDecoder` to memorize “unfinished” characters and decode them when the next chunk comes.
