@@ -1,200 +1,127 @@
-# Notes about loops in JavaScript
+# Loops
 
-- [Notes about loops in JavaScript](#notes-about-loops-in-javascript)
-  - [`for...in` loop](#forin-loop)
-  - [Four native ways to list/traverse an object](#four-native-ways-to-listtraverse-an-object)
-  - [`for...of` loop](#forof-loop)
+- [Loops](#loops)
+  - [`while()`](#while)
+  - [`while` with `break`](#while-with-break)
+  - [`while()` loop on a single line](#while-loop-on-a-single-line)
+  - [`do...while()`](#dowhile)
+  - [`for()`](#for)
+  - [Named `for` loop](#named-for-loop)
 
-<hr>
+---
 
-## `for...in` loop
+## `while()`
 
-- `for...in` loop is used with objects.
+An example for the `while()` loop:
 
 ```js
-const obj = {
-  name: "some name",
-  age: 30,
-};
+let condition = 1;
 
-for (let key in obj) {
-  console.log(`${key}: ${obj[key]}`);
-}
+while (condition < 3) {
+  console.log(condition);
+  condition++;
+} // 1 2
 ```
 
-- Symbol properties do not participate in the `for...in` loop
+## `while` with `break`
+
+We can use `while` with `break` as well:
 
 ```js
-const id = Symbol("id");
+let condition = 1;
 
-const obj = {
-  name: "SomeName",
-  [id]: 123,
-};
-
-for (key in obj) {
-  console.log(key);
-} // name
-
-// `Object.keys()` also ignores Symbol properties
-console.log(Object.keys(obj)); // ['name']
+while (condition < 3) {
+  console.log(condition);
+  condition++;
+  break;
+} // 1
 ```
 
-<hr>
+## `while()` loop on a single line
 
-## Four native ways to list/traverse an object
-
-There are four native ways to list/traverse object properties, which could be useful in looping through objects:
-
-- `for...in` loops. This method traverses all of the enumerable string properties of an object as well as its prototype chain.
+We can write a `while()` loop on one line:
 
 ```js
-const Prototype1 = {
-  prototypeProp1: "prototypeValue1",
-};
+let condition = 1;
 
-const Child1 = {
-  childProp1: "childValue1",
-};
-
-Object.setPrototypeOf(Child1, Prototype1);
-
-for (let key in Child1) {
-  console.log(key); // childProp1 prototypeProp1
-}
-```
-
-- `Object.keys()` returns an array of object keys. `Object.values()` returns an array of object values. These methods do not return keys and values from the prototype chain.
-
-```js
-const obj = {
-  name: "name",
-  sizes: {
-    height: 182,
-    width: 50,
-  },
-};
-
-Object.keys(obj); // returns an array of keys
-Object.values(obj); // returns an array of values
-```
-
-- `Object.entries()` returns an array that includes arrays consisting of key-value pairs
-
-```js
-const obj = {
-  name: "name",
-  sizes: {
-    height: 182,
-    width: 50,
-  },
-};
-
-Object.entries(obj); // returns an array of [key, value] pairs.
-```
-
-- `Object.getOwnPropertyNames(<obj>)` returns an array containing all the own string property names in the object `obj`, regardless of if they are enumerable or not.
-
-```js
-const Prototype1 = {
-  prototypeProp1: "prototypeValue1",
-};
-
-const Child1 = {
-  childProp1: "childValue1",
-};
-
-Object.setPrototypeOf(Child1, Prototype1);
-
-console.log(Object.getOwnPropertyNames(Child1)); // ['childValue1']
+while (condition < 3) console.log(condition++);
 ```
 
 <hr>
 
-## `for...of` loop
+## `do...while()`
 
-- `for...of` loop could be used with arrays.
+`do...while()` loop runs at least once, then checks if a condition for the loop is true:
 
 ```js
-const obj = {
-  name: "name",
-  sizes: {
-    height: 182,
-    width: 50,
-  },
-};
+let condition = 1;
 
-// Object.values() returns an array
-for (let value of Object.values(obj)) {
-  console.log(value); // loop over values
+do {
+  console.log(condition);
+  condition++;
+} while (condition < 1);
+```
+
+<hr>
+
+## `for()`
+
+An example for the `for()` loop:
+
+```js
+for (let i = 0; i < 3; i++) {
+  console.log(i);
 }
 ```
 
-- `for...of` loop could be used with maps.
+`for` loops can also be like these:
 
 ```js
-const map = new Map([
-  ["1", "str1"],
-  [1, "num1"],
-  [true, "bool1"],
-]);
+let condition = 1;
 
-for (let entry of map) {
-  console.log(entry);
+for (; condition < 3; condition++) {
+  console.log(condition);
 }
 ```
 
-- `for...of` loop could be used with sets.
-
 ```js
-const set = new Set();
+let condition = 1;
 
-set.add("value");
-set.add({ name: "some name" });
-
-for (let item of set) console.log(item);
-```
-
-- `for...of` loop could be used with generators.
-
-```js
-function* generatorFunc() {
-  yield 1;
-  yield 2;
-  return 3;
-}
-
-const generator = generatorFunc();
-
-for (let value of generator) {
-  console.log(value);
-  // outputs 1, 2. To output 3, yield should be used instead of return
+for (; condition < 3; ) {
+  console.log(condition++);
+  break;
 }
 ```
 
-`for..of` ignores the last value, when `done: true`. So, if we want all results to be shown by `for..of`, we must return them with `yield` not `return`.
+<hr>
+
+## Named `for` loop
+
+We can name a `for` loop and then `break` the loop using the name:
 
 ```js
-function* generatorFunc() {
-  yield 1;
-  yield 2;
-  yield 3;
-}
+label: for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    if (j == 1) continue; // skips the inner loop when j == 1
+    if (i == 1) break label; // breaks the outer loop when i == 1
 
-const generator = generatorFunc();
-
-for (let value of generator) {
-  console.log(value);
-  // outputs 1, 2, 3
+    console.log(`i is ${i}, j is ${j}`);
+  }
 }
 ```
 
-- `for...of` loop could generally be used with iterable objects such as strings, childNodes, classList, etc.
-
 ```js
-const str = `This is a string`;
-
-for (let char of str) {
-  console.log(char);
+// Example 2: Using break to exit the inner loop:
+outerLoop: for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    if (j == 1) {
+      console.log(`Breaking out of inner loop`);
+      break;
+    }
+    console.log(`i: ${i}, j: ${j}`);
+  }
 }
 ```
+
+<hr>
+<hr>
