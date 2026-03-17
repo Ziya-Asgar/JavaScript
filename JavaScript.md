@@ -26,25 +26,20 @@
   - [Arrays](#arrays)
   - [Maps](#maps)
   - [WeakMaps](#weakmaps)
-    - [Create a `WeakMap`](#create-a-weakmap)
-    - [Add key-value pairs into a weakmap](#add-key-value-pairs-into-a-weakmap)
-    - [Get the value of a specific key](#get-the-value-of-a-specific-key)
-    - [`.has()`](#has)
-    - [`.delete()`](#delete)
   - [Sets](#sets)
     - [Create a `Set`](#create-a-set)
     - [Add items to a set](#add-items-to-a-set)
-    - [`.has()`](#has-1)
+    - [`.has()`](#has)
     - [`.size`](#size)
     - [Loop over the set items](#loop-over-the-set-items)
     - [`.forEach()`](#foreach)
-    - [`.delete()`](#delete-1)
+    - [`.delete()`](#delete)
     - [`.clear()`](#clear)
   - [WeakSets](#weaksets)
     - [Create a `WeakSet`](#create-a-weakset)
     - [Add an item to a weakset](#add-an-item-to-a-weakset)
-    - [`.has()`](#has-2)
-    - [`.delete()`](#delete-2)
+    - [`.has()`](#has-1)
+    - [`.delete()`](#delete-1)
   - [Destructuring](#destructuring)
     - [Destructuring an array](#destructuring-an-array)
     - [Destructuring a string](#destructuring-a-string)
@@ -506,83 +501,7 @@ switch (condition1) {
 
 ## WeakMaps
 
-### Create a `WeakMap`
-
-To create a `WeakMap`, we use the `new WeakMap()` syntax:
-
-```js
-const weakMap = new WeakMap();
-```
-
-<hr>
-
-### Add key-value pairs into a weakmap
-
-To add key-value pairs into a weakmap, we use the `.set()` method. Remember the key of a weakmap must be an object:
-
-```js
-const weakMap = new WeakMap();
-
-const obj = {
-  key: "value",
-  key2: "value2",
-};
-
-weakMap.set(obj, "value1");
-```
-
-<hr>
-
-### Get the value of a specific key
-
-To get the value of a specific key, we use the `.get()` method:
-
-```js
-const weakMap = new WeakMap();
-
-const obj = {
-  key: "value",
-  key2: "value2",
-};
-
-weakMap.set(obj, "value1");
-
-console.log(weakMap.get(obj)); // value1
-```
-
-<hr>
-
-### `.has()`
-
-`.has()` method returns `true`, if a weakmap has a specific key or `false` otherwise:
-
-```js
-const weakMap = new WeakMap();
-
-const obj = {
-  key: "value",
-  key2: "value2",
-};
-
-weakMap.has(obj);
-```
-
-<hr>
-
-### `.delete()`
-
-`.delete()` method deletes a specific key-value pair from weakmap:
-
-```js
-const weakMap = new WeakMap();
-
-const obj = {
-  key: "value",
-  key2: "value2",
-};
-
-weakMap.delete(obj); // true
-```
+[WeakMaps](./JS_WeakMaps.md)
 
 <hr>
 <hr>
