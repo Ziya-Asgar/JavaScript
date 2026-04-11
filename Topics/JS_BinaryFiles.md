@@ -37,7 +37,7 @@ Let’s eliminate a possible source of confusion. `ArrayBuffer` is not `Array`:
 - It takes exactly that much space in the memory.
 - To access individual bytes, another “view” object is needed, not `<buffer>[<index>]`.
 
-<hr>
+---
 
 ### Typed Arrays
 
@@ -133,7 +133,7 @@ const arr8 = new Uint8Array([0, 1, 2, 3]);
 const arr16 = new Uint16Array(arr8.buffer);
 ```
 
-<hr>
+---
 
 ### Typed Array Methods
 
@@ -149,7 +149,7 @@ There are two additional methods that typed arrays have:
 - `<typedArray>.set(<fromArr>, [<offset>])` copies all elements from `<fromArr>` to the `<typedArray>`, starting at position `<offset>` (0 by default).
 - `<typedArray>.subarray([<begin>, <end>])` creates a new view of the same type from `<begin>` to `<end>` (exclusive). That’s similar to `slice` method, but doesn’t copy anything – just creates a new view, to operate on the given piece of data.
 
-<hr>
+---
 
 ### `DataView`
 
@@ -182,7 +182,7 @@ console.log(dataView.getUint32(0)); // 4294967295 (biggest 32-bit unsigned int)
 dataView.setUint32(0, 0); // set 4-byte number to zero, thus setting all bytes to 0
 ```
 
-<hr>
+---
 
 ## `TextDecoder` and `TextEncoder`
 
@@ -218,7 +218,7 @@ const binaryString = uint8Array.subarray(1, -1);
 console.log(new TextDecoder().decode(binaryString)); // Hello
 ```
 
-<hr>
+---
 
 ### `TextEncoder`
 
@@ -236,7 +236,7 @@ console.log(uint8Array); // Uint8Array(5) [ 72, 101, 108, 108, 111 ]
 console.log(new TextDecoder().decode(uint8Array)); // Hello
 ```
 
-<hr>
+---
 
 ## Blob
 
@@ -312,7 +312,7 @@ reader.onload = function () {
 
 By using a Blob with the `URL.createObjectURL(<blob>)` option we need to revoke the blob to free up the memory. Using a Blob with this "Blob to data url" option, we might have performance and memory losses on big `Blob` objects for encoding.
 
-<hr>
+---
 
 ## File and FileReader
 
@@ -347,7 +347,7 @@ function showFile(input) {
 </script>
 ```
 
-<hr>
+---
 
 ### `FileReader`
 
@@ -462,7 +462,7 @@ The `error` event fires if the file cannot be read for some reason. When the `er
 - 4 - file isn’t readable
 - 5 - encoding error
 
-<hr>
+---
 
 ## Summary of Binary Files
 
@@ -668,5 +668,6 @@ reader5.onloadend = () => {
 reader5.abort();
 ```
 
-<hr>
-<hr>
+---
+
+---
