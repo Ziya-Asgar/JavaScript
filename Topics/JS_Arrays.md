@@ -64,7 +64,7 @@ const array = ["value1", "value2", "value3"];
 console.log(array); // ['value1', 'value2', 'value3']
 ```
 
-<hr>
+---
 
 ## Accessing array items
 
@@ -77,7 +77,7 @@ console.log(arr[1]); // value2
 console.log(arr.at(1)); // value2
 ```
 
-<hr>
+---
 
 ## Copy arrays with the spread operator
 
@@ -91,7 +91,7 @@ const arr3 = [0, ...arr1, ...arr2];
 console.log(arr3); // [ 0, "value1", "value2", "value3", "value1", "value2", "value3" ]
 ```
 
-<hr>
+---
 
 ## `.pop()`
 
@@ -170,7 +170,7 @@ console.log(newLength1); // 4
 console.log(newLength2); // 6
 ```
 
-<hr>
+---
 
 ## Cutting out arrays with `.length`
 
@@ -185,7 +185,7 @@ arr.length = 2;
 console.log(arr); // ['value1', 'value2']
 ```
 
-<hr>
+---
 
 ## `.splice()`
 
@@ -211,7 +211,7 @@ arr.splice(2, 0, "splice 1", "splice 2");
 console.log(arr); // ['value1', 'value2', 'splice 1', 'splice 2', 'value3']
 ```
 
-<hr>
+---
 
 ## `.concat()`
 
@@ -227,7 +227,7 @@ const newArr = arr1.concat([1, 2], 3, 4, [5, 6], arr2, arr3);
 console.log(newArr); // [1, 2, 3, 4, 5, 6, 'value2', 'value3']
 ```
 
-<hr>
+---
 
 ## `.forEach()`
 
@@ -243,7 +243,7 @@ arr.forEach((item, index, array) => {
 });
 ```
 
-<hr>
+---
 
 ## `.indexOf()` and `.lastIndexOf`
 
@@ -268,7 +268,7 @@ console.log(arr.lastIndexOf("value1", 0)); // 0
 console.log(arr.lastIndexOf("value1", 1)); // 0
 ```
 
-<hr>
+---
 
 ## `.includes()`
 
@@ -280,7 +280,7 @@ const arr = ["value1", "value2", "value3"];
 console.log(arr.includes("looked up item", 2)); // false
 ```
 
-<hr>
+---
 
 ## `.find()`
 
@@ -306,7 +306,7 @@ const foundItem = arr.find(function (item, index, array) {
 console.log(foundItem); // 4
 ```
 
-<hr>
+---
 
 ## `.findIndex()` and `.findLastIndex`
 
@@ -332,7 +332,7 @@ const result = arr.findLastIndex(function (item, index, array) {
 console.log(result); // 4
 ```
 
-<hr>
+---
 
 ## `.filter()`
 
@@ -349,7 +349,7 @@ console.log(result); // ['value2', 'value3']
 console.log(arr); // ['value1', 'value2', 'value3']
 ```
 
-<hr>
+---
 
 ## `.map()`
 
@@ -365,7 +365,7 @@ const result = arr.map(function (item, index, array) {
 console.log(result); // ['value10', 'value20', 'value30']
 ```
 
-<hr>
+---
 
 ## `.sort()`
 
@@ -406,7 +406,7 @@ console.log(arr); // ['value3', 'value1', 'value2', 1, 2, 10, 23]
 console.log(newArr); // [1, 10, 2, 23, 'value1', 'value2', 'value3']
 ```
 
-<hr>
+---
 
 ## `.reverse()`
 
@@ -434,7 +434,7 @@ console.log(arr); // ['value3', 'value1', 'value2', 1, 23, 10, 2]
 console.log(newArr); // [2, 10, 23, 1, 'value2', 'value1', 'value3']
 ```
 
-<hr>
+---
 
 ## `.join()`
 
@@ -447,7 +447,7 @@ console.log(arr.join(", ")); // value1, value2, value3
 console.log(arr.join("-")); // value1-value2-value3
 ```
 
-<hr>
+---
 
 ## `.reduce()`
 
@@ -480,7 +480,7 @@ array.reduceRight(function (acc, item, index, array) {
 console.log(sum);
 ```
 
-<hr>
+---
 
 ## Higher order functions and `this`
 
@@ -516,7 +516,7 @@ console.log(result);
 */
 ```
 
-<hr>
+---
 
 ## `Array.isArray()`
 
@@ -528,7 +528,7 @@ const arr = [1, 2, 3, 4];
 console.log(Array.isArray(arr)); // true
 ```
 
-<hr>
+---
 
 ## `.some()`
 
@@ -545,7 +545,7 @@ const result = arr.some(function (item, index, array) {
 console.log(result); // true.
 ```
 
-<hr>
+---
 
 ## `.every()`
 
@@ -562,7 +562,7 @@ const result = arr.every(function (item, index, array) {
 console.log(result); // false.
 ```
 
-<hr>
+---
 
 ## `Array.from()`
 
@@ -586,7 +586,7 @@ const arrFromStrings = Array.from("Hello");
 console.log(arrFromStrings); // ['H', 'e', 'l', 'l', 'o']
 ```
 
-<hr>
+---
 
 ## `.fill()`
 
@@ -605,5 +605,6 @@ arr.fill(100);
 console.log(arr); // [100, 100, 100, 100]
 ```
 
-<hr>
-<hr>
+---
+
+---
