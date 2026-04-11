@@ -42,7 +42,7 @@ const obj = new ClassName("Ziya");
 obj.sayHi(); // Hi, Ziya
 ```
 
-<hr>
+---
 
 ## Classes are functions
 
@@ -61,7 +61,7 @@ class ClassName {
 console.log(typeof ClassName); // function
 ```
 
-<hr>
+---
 
 ## Named class expressions
 
@@ -89,7 +89,7 @@ class MyClass {
 console.log(MyClass); // error, MyClass name isn't visible outside of the class
 ```
 
-<hr>
+---
 
 ## getters/setters, and computed properties in classes
 
@@ -123,7 +123,7 @@ user = new User(""); // Name is too short.
 
 Note that we have used underscore in getter and setter functions, while referring to a variable. This is because if we don't use underscore, and refer to `this.name`, we will trigger the setter function, which will try to set the `name`, which will further trigger the setter function, causing endless loop.
 
-<hr>
+---
 
 ## Class fields
 
@@ -141,7 +141,7 @@ class User {
 new User().sayHi(); // Hello, Some Name!
 ```
 
-<hr>
+---
 
 When a class is created, its methods are stored in the prototype. So, `class User {...}` would store its methods in the `User.prototype`. The important difference of class fields is that they are set on individual objects, not `User.prototype`:
 
@@ -163,7 +163,7 @@ console.log(user.name === User.prototype.name); // false
 console.log(user.sayHi === User.prototype.sayHi); // true
 ```
 
-<hr>
+---
 
 ## Class inheritance
 
@@ -277,7 +277,7 @@ console.log(rabbit.name); // White Rabbit
 console.log(rabbit.earLength); // 10
 ```
 
-<hr>
+---
 
 ## Static methods and properties
 
@@ -324,7 +324,7 @@ const user = new User();
 console.log(user.prop); // undefined
 ```
 
-<hr>
+---
 
 ## Protected properties
 
@@ -357,7 +357,7 @@ const coffeeMachine = new CoffeeMachine(100);
 coffeeMachine.waterAmount = -10; // _waterAmount will become 0, not -10
 ```
 
-<hr>
+---
 
 It sometimes happens that a property must be set at creation time only, and then never be modified. To do so, we only need to make a getter, but not a setter. Here the `power` property becomes read-only:
 
@@ -410,7 +410,7 @@ coffeeMachine.setWaterAmount(-1000);
 console.log(coffeeMachine.getWaterAmount());
 ```
 
-<hr>
+---
 
 ## Private properties
 
@@ -458,7 +458,7 @@ coffeeMachine.#fixWaterAmount(13); // Error
 coffeeMachine.#waterLimit = 1000; // Error
 ```
 
-<hr>
+---
 
 ## Extend built-in classes
 
@@ -475,7 +475,7 @@ const arrClass = new PowerArray(1, 2, 3, 4, 5);
 console.log(arrClass.isEmpty()); // false
 ```
 
-<hr>
+---
 
 ## `instanceof`
 
@@ -505,7 +505,7 @@ const arr = [1, 2, 3];
 console.log(arr instanceof Array); // true
 ```
 
-<hr>
+---
 
 ## Mixin
 
@@ -535,5 +535,6 @@ Object.assign(User.prototype, sayHiMixin);
 new User("someone").sayHi(); // Hello, someone
 ```
 
-<hr>
-<hr>
+---
+
+---
