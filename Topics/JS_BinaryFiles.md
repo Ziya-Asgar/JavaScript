@@ -184,6 +184,8 @@ dataView.setUint32(0, 0); // set 4-byte number to zero, thus setting all bytes t
 
 ---
 
+---
+
 ## `TextDecoder` and `TextEncoder`
 
 ### `TextDecoder`
@@ -235,6 +237,8 @@ console.log(uint8Array); // Uint8Array(5) [ 72, 101, 108, 108, 111 ]
 
 console.log(new TextDecoder().decode(uint8Array)); // Hello
 ```
+
+---
 
 ---
 
@@ -311,6 +315,8 @@ reader.onload = function () {
 ```
 
 By using a Blob with the `URL.createObjectURL(<blob>)` option we need to revoke the blob to free up the memory. Using a Blob with this "Blob to data url" option, we might have performance and memory losses on big `Blob` objects for encoding.
+
+---
 
 ---
 
@@ -461,6 +467,8 @@ The `error` event fires if the file cannot be read for some reason. When the `er
 - 3 - read was aborted
 - 4 - file isn’t readable
 - 5 - encoding error
+
+---
 
 ---
 
