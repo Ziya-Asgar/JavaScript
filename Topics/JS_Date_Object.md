@@ -12,6 +12,8 @@
 
 ---
 
+---
+
 ## create a new `Date()`
 
 We can create a new `Date()` variable using the `new` keyword:
@@ -26,7 +28,9 @@ const date2 = new Date(1991, 2);
 console.log(date2); // Mon Mar 25 1991 00:00:00
 ```
 
-<hr>
+---
+
+---
 
 ## `Date.now()`
 
@@ -39,6 +43,10 @@ console.log(nowInMS); // For example, 1519211809934
 console.log(new Date(nowInMS)); // logs current date and time
 ```
 
+---
+
+---
+
 ## `.getTime()`
 
 `.getTime()` method returns the same as above:
@@ -49,7 +57,9 @@ const nowInMS = new Date().getTime();
 console.log(nowInMS);
 ```
 
-<hr>
+---
+
+---
 
 ## Setting a date using the `Date` object
 
@@ -98,7 +108,9 @@ There are different ways of setting a date using the `Date` object. The exact ti
   new Date(2011, 0, 1);
   ```
 
-<hr>
+---
+
+---
 
 ## Retrieve different parts of a date
 
@@ -132,7 +144,9 @@ nowUTC.getUTCSeconds();
 nowUTC.getUTCMilliseconds();
 ```
 
-<hr>
+---
+
+---
 
 ## `.getTimezoneOffset()`
 
@@ -142,7 +156,9 @@ The `.getTimezoneOffset()` method of `Date` instances returns the difference, in
 new Date().getTimezoneOffset();
 ```
 
-<hr>
+---
+
+---
 
 ## Setting different parts of a date
 
@@ -166,7 +182,9 @@ now.setSeconds(20, 0); // setSeconds(sec, [ms])
 now.setMilliseconds(100); // setMilliseconds(ms)
 ```
 
-<hr>
+---
+
+---
 
 ## `Date.parse()`
 
@@ -184,5 +202,6 @@ For example, "2011-10-10" (date-only form), "2011-10-10T14:48:00" (date-time for
 Date.parse("2012-01-26T13:51:50.417-07:00"); // 1327611110417
 ```
 
-<hr>
-<hr>
+---
+
+---
