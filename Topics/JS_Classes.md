@@ -20,6 +20,8 @@
 
 ---
 
+---
+
 ## Define a class and create objects based on a class
 
 We use the `class` keyword to define a new class, and then use that class with the `new` keyword to create a new object based on that class:
@@ -44,6 +46,8 @@ obj.sayHi(); // Hi, Ziya
 
 ---
 
+---
+
 ## Classes are functions
 
 A class is actually a function in JavaScript:
@@ -60,6 +64,8 @@ class ClassName {
 
 console.log(typeof ClassName); // function
 ```
+
+---
 
 ---
 
@@ -88,6 +94,8 @@ class MyClass {
 
 console.log(MyClass); // error, MyClass name isn't visible outside of the class
 ```
+
+---
 
 ---
 
@@ -122,6 +130,8 @@ user = new User(""); // Name is too short.
 ```
 
 Note that we have used underscore in getter and setter functions, while referring to a variable. This is because if we don't use underscore, and refer to `this.name`, we will trigger the setter function, which will try to set the `name`, which will further trigger the setter function, causing endless loop.
+
+---
 
 ---
 
@@ -165,6 +175,8 @@ console.log(user.sayHi === User.prototype.sayHi); // true
 
 ---
 
+---
+
 ## Class inheritance
 
 Class inheritance is a way for one class to extend another class. So we can create a new functionality on top of the existing one. We use the `extends` keyword for this:
@@ -193,6 +205,10 @@ child.childMethod(); // hi from child
 child.parentMethod(); // hi from parent
 ```
 
+---
+
+---
+
 ## Override a method in a parent class
 
 We can also override a method in a parent class:
@@ -217,6 +233,10 @@ const child = new Child();
 
 child.method(); // Child method overrode the parent method
 ```
+
+---
+
+---
 
 ## Extend the method in a parent class
 
@@ -279,6 +299,8 @@ console.log(rabbit.earLength); // 10
 
 ---
 
+---
+
 ## Static methods and properties
 
 We can also assign a method to the class that won't be inherited by objects. Such methods are called **static**. Usually, static methods are used to implement functions that belong to the class as a whole, but not to any particular object of it. Static methods and properties are inherited by extended classes. In a class declaration, they are prepended by `static` keyword like this:
@@ -323,6 +345,8 @@ console.log(User2.prop); // Some Name
 const user = new User();
 console.log(user.prop); // undefined
 ```
+
+---
 
 ---
 
@@ -412,6 +436,8 @@ console.log(coffeeMachine.getWaterAmount());
 
 ---
 
+---
+
 ## Private properties
 
 There are also private properties. Privates should start with `#`. They are only accessible from inside the class.
@@ -460,6 +486,8 @@ coffeeMachine.#waterLimit = 1000; // Error
 
 ---
 
+---
+
 ## Extend built-in classes
 
 We can add more functionality to the built-in classes like Array, Map and others using the `extends` keyword.
@@ -474,6 +502,8 @@ class PowerArray extends Array {
 const arrClass = new PowerArray(1, 2, 3, 4, 5);
 console.log(arrClass.isEmpty()); // false
 ```
+
+---
 
 ---
 
@@ -504,6 +534,8 @@ const arr = [1, 2, 3];
 
 console.log(arr instanceof Array); // true
 ```
+
+---
 
 ---
 
