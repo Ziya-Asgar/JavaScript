@@ -22,6 +22,10 @@ const condition1 = true,
 if (condition1 === condition2) console.log(`It worked`); // It worked
 ```
 
+---
+
+---
+
 ## `if()...else`
 
 An example for an `if()...else` statement:
@@ -36,6 +40,10 @@ if (condition1 === condition2) {
   console.log(`some default result`);
 }
 ```
+
+---
+
+---
 
 ## `if()...else if()...else`
 
@@ -54,7 +62,9 @@ if (condition1 === condition2) {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## Ternary conditions
 
@@ -76,7 +86,9 @@ const resultOfConditions =
 console.log(resultOfConditions); // More
 ```
 
-<hr>
+---
+
+---
 
 ## `switch`
 
@@ -101,5 +113,6 @@ switch (condition1) {
 }
 ```
 
-<hr>
-<hr>
+---
+
+---
