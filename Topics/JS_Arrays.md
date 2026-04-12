@@ -35,6 +35,8 @@
 
 ---
 
+---
+
 ## Create an array
 
 Here are some ways to create an array:
@@ -66,6 +68,8 @@ console.log(array); // ['value1', 'value2', 'value3']
 
 ---
 
+---
+
 ## Accessing array items
 
 We can access the array items using the square bracket notation. Also, `.at()` method helps us to access an array items in a specific position:
@@ -76,6 +80,8 @@ const arr = ["value1", "value2", "value3"];
 console.log(arr[1]); // value2
 console.log(arr.at(1)); // value2
 ```
+
+---
 
 ---
 
@@ -93,6 +99,8 @@ console.log(arr3); // [ 0, "value1", "value2", "value3", "value1", "value2", "va
 
 ---
 
+---
+
 ## `.pop()`
 
 `.pop()` method deletes and returns the last array item:
@@ -105,6 +113,10 @@ const deletedLastItem = arr.pop();
 console.log(arr); // ['value1', 'value2']
 console.log(deletedLastItem); // value3
 ```
+
+---
+
+---
 
 ## `.push()`
 
@@ -120,6 +132,10 @@ arr.push("value5", "value6");
 console.log(arr); // ['value1', 'value2', 'value3', 'value4', 'value5', 'value6']
 ```
 
+---
+
+---
+
 ## `.shift()`
 
 `.shift()` deletes and returns the first item of an array:
@@ -133,6 +149,10 @@ console.log(arr); // ['value2', 'value3']
 console.log(deletedFirstItem); // value1
 ```
 
+---
+
+---
+
 ## `.unshift()`
 
 `.unshift()` method inserts an item or items to the beginning of an array. It returns the length of the array:
@@ -145,6 +165,10 @@ arr.unshift("new value2", "new value3");
 
 console.log(arr); // ['new value2', 'new value3', 'new value1', 'value1', 'value2', 'value3']
 ```
+
+---
+
+---
 
 ## Return values of `.push()` and `.unshift()`
 
@@ -172,6 +196,8 @@ console.log(newLength2); // 6
 
 ---
 
+---
+
 ## Cutting out arrays with `.length`
 
 If there is an array with several items, we can keep specific number of them and cut the rest out by specifying the `.length`:
@@ -184,6 +210,8 @@ arr.length = 2;
 
 console.log(arr); // ['value1', 'value2']
 ```
+
+---
 
 ---
 
@@ -213,6 +241,8 @@ console.log(arr); // ['value1', 'value2', 'splice 1', 'splice 2', 'value3']
 
 ---
 
+---
+
 ## `.concat()`
 
 `.concat()` method merges two or more arrays. It does not change the existing arrays, but instead **returns a new array**.
@@ -229,6 +259,8 @@ console.log(newArr); // [1, 2, 3, 4, 5, 6, 'value2', 'value3']
 
 ---
 
+---
+
 ## `.forEach()`
 
 `forEach` method loops through an array and gives access to the **array item**, **index** of the item and the **array** itself:
@@ -242,6 +274,8 @@ arr.forEach((item, index, array) => {
   );
 });
 ```
+
+---
 
 ---
 
@@ -270,6 +304,8 @@ console.log(arr.lastIndexOf("value1", 1)); // 0
 
 ---
 
+---
+
 ## `.includes()`
 
 `.includes()` looks for an array item starting from a given `index`, and returns `true` or `false`.
@@ -279,6 +315,8 @@ const arr = ["value1", "value2", "value3"];
 
 console.log(arr.includes("looked up item", 2)); // false
 ```
+
+---
 
 ---
 
@@ -308,6 +346,8 @@ console.log(foundItem); // 4
 
 ---
 
+---
+
 ## `.findIndex()` and `.findLastIndex`
 
 `.findIndex()` method returns **index** that meets a given condition. It gives an access to the **array item**, **index** of the item and the **array** itself. The `findLastIndex` method is like `.findIndex()`, but searches from right to left:
@@ -334,6 +374,8 @@ console.log(result); // 4
 
 ---
 
+---
+
 ## `.filter()`
 
 `.filter()` method filters the array using the provided condition and returns a new array. It gives an access to the **array item**, **index** of the item and the **array** itself. _It doesn't change the original array_.
@@ -351,6 +393,8 @@ console.log(arr); // ['value1', 'value2', 'value3']
 
 ---
 
+---
+
 ## `.map()`
 
 `.map()` method applies the provided function on every array item and returns a new array without changing the original one. It gives an access to the **array item**, **index** of the item and the **array** itself.
@@ -364,6 +408,8 @@ const result = arr.map(function (item, index, array) {
 
 console.log(result); // ['value10', 'value20', 'value30']
 ```
+
+---
 
 ---
 
@@ -392,6 +438,10 @@ array.sort(function (a, b) {
 console.log(array); // ['value3', 'value1', 'value2', 1, 2, 10, 23]
 ```
 
+---
+
+---
+
 ## `.toSorted()`
 
 The `.toSorted()` method of Array instances is the copying version of the `.sort()` method. It returns a new array with the elements sorted in ascending order.
@@ -408,6 +458,8 @@ console.log(newArr); // [1, 10, 2, 23, 'value1', 'value2', 'value3']
 
 ---
 
+---
+
 ## `.reverse()`
 
 The `.reverse()` method of Array instances reverses an array in place and returns the reference to the same array:
@@ -419,6 +471,10 @@ arr.reverse();
 
 console.log(arr); // [2, 10, 23, 1, 'value2', 'value1', 'value3']
 ```
+
+---
+
+---
 
 ## `.toReversed()`
 
@@ -436,6 +492,8 @@ console.log(newArr); // [2, 10, 23, 1, 'value2', 'value1', 'value3']
 
 ---
 
+---
+
 ## `.join()`
 
 `.join()` method accepts a delimeter as an argument and joins the array items with the provided delimeter.
@@ -446,6 +504,8 @@ const arr = ["value1", "value2", "value3"];
 console.log(arr.join(", ")); // value1, value2, value3
 console.log(arr.join("-")); // value1-value2-value3
 ```
+
+---
 
 ---
 
@@ -464,6 +524,10 @@ const sum = array.reduce(function (acc, item, index, array) {
 console.log(sum);
 ```
 
+---
+
+---
+
 ## `.reduceRight()`
 
 `.reduceRight()` method does the same thing as `.reduce()` but from right to left:
@@ -479,6 +543,8 @@ array.reduceRight(function (acc, item, index, array) {
 // logs 10 - the sum of all items in the array
 console.log(sum);
 ```
+
+---
 
 ---
 
@@ -518,6 +584,8 @@ console.log(result);
 
 ---
 
+---
+
 ## `Array.isArray()`
 
 `Array.isArray()` method returns `true`, if the provided argument is an array, or `false` otherwise:
@@ -527,6 +595,8 @@ const arr = [1, 2, 3, 4];
 
 console.log(Array.isArray(arr)); // true
 ```
+
+---
 
 ---
 
@@ -547,6 +617,8 @@ console.log(result); // true.
 
 ---
 
+---
+
 ## `.every()`
 
 If a function returns a falsy value, `.every()` immediately returns `false` and stops iterating over the rest of the items:
@@ -561,6 +633,8 @@ const result = arr.every(function (item, index, array) {
 // logs false after the first item that returned a falsy value
 console.log(result); // false.
 ```
+
+---
 
 ---
 
@@ -585,6 +659,8 @@ const arrFromStrings = Array.from("Hello");
 
 console.log(arrFromStrings); // ['H', 'e', 'l', 'l', 'o']
 ```
+
+---
 
 ---
 
