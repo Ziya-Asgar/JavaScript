@@ -134,7 +134,9 @@ Pointer events have the same properties as mouse events plus others:
 
 `<element>.releasePointerCapture(pointerId)` removes the binding.
 
-<hr>
+---
+
+---
 
 ## Mouse events
 
@@ -310,7 +312,9 @@ For `mouseout`, event, we have these properties:
 - Transitions inside the element, to/from descendants, are not counted.
 - Events `mouseenter`/`mouseleave` do not bubble.
 
-<hr>
+---
+
+---
 
 ## Keyboard events
 
@@ -342,7 +346,9 @@ Here are keyboard events and their event properties:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## `<form>` element events
 
@@ -424,7 +430,9 @@ Here are `<form>` element events:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## `transitionend`
 
@@ -458,7 +466,9 @@ Here are `<form>` element events:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Clipboard events
 
@@ -509,7 +519,9 @@ A handler for `cut` and `copy` events can modify the clipboard contents by calli
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Scroll events
 
@@ -560,7 +572,9 @@ A handler for `cut` and `copy` events can modify the clipboard contents by calli
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## `input` and `change` events
 
@@ -592,7 +606,9 @@ Here are some more events:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Ways to assign an event handler
 
@@ -716,7 +732,9 @@ There are several ways to assign an event handler:
   <element>.addEventListener('mousedown', classForDOM);
   ```
 
-<hr>
+---
+
+---
 
 ## `this` in the DOM event
 
@@ -749,7 +767,9 @@ In the DOM event, the value of `this` is the element that has the handler for th
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Properties of the event object
 
@@ -815,7 +835,9 @@ Event object has several useful properties:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Preventing the default event action
 
@@ -848,7 +870,9 @@ We can use 2 ways to tell the browser to stop its default action:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Custom events
 
@@ -913,7 +937,7 @@ Instead of using `new Event`, we can use the `CustomEvent`. `CustomEvent` is bet
 </body>
 ```
 
-<hr>
+---
 
 Instead of using `new Event`, we should create specific type of events:
 
@@ -934,7 +958,9 @@ const someMouseEvent = new MouseEvent("click", {
 });
 ```
 
-<hr>
+---
+
+---
 
 ## Events that come from real user actions
 
@@ -969,7 +995,9 @@ const someMouseEvent = new MouseEvent("click", {
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Document and resource loading
 
@@ -1056,5 +1084,6 @@ We can track if the loading of some external resources were successful or not us
 - `onload` – successful load,
 - `onerror` – an error occurred.
 
-<hr>
-<hr>
+---
+
+---
