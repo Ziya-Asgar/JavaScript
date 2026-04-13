@@ -4,8 +4,10 @@
   - [Destructuring an array](#destructuring-an-array)
   - [Destructuring a string](#destructuring-a-string)
   - [Destructuring a set](#destructuring-a-set)
-  - [Sawpping values using destructuring](#sawpping-values-using-destructuring)
+  - [Swapping values using destructuring](#swapping-values-using-destructuring)
   - [Destructuring an object](#destructuring-an-object)
+
+---
 
 ---
 
@@ -68,6 +70,10 @@ console.log(value1); // new value1
 console.log(value2); // default value2
 ```
 
+---
+
+---
+
 ## Destructuring a string
 
 Here is an example of destructuring a string:
@@ -75,6 +81,10 @@ Here is an example of destructuring a string:
 ```js
 const [a, b, c] = "abc";
 ```
+
+---
+
+---
 
 ## Destructuring a set
 
@@ -84,7 +94,11 @@ Here is an example of destructuring a set:
 const [one, two, three] = new Set([1, 2, 3]);
 ```
 
-## Sawpping values using destructuring
+---
+
+---
+
+## Swapping values using destructuring
 
 Here is how to swap the values of variables using destructuring:
 
@@ -97,6 +111,10 @@ let two = 1;
 console.log(one); // 1
 console.log(two); // 2
 ```
+
+---
+
+---
 
 ## Destructuring an object
 
@@ -215,5 +233,6 @@ console.log(length); // 100
 console.log(item1); // cake
 ```
 
-<hr>
-<hr>
+---
+
+---
