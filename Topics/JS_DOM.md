@@ -58,7 +58,9 @@ console.log(document.body); // <body>
 console.log(document.documentElement); // <html lang="en">
 ```
 
-<hr>
+---
+
+---
 
 ## Checking if an element or node has child nodes
 
@@ -81,6 +83,10 @@ If we want to check if a node has child nodes, we can use `<node>.hasChildNodes(
   </script>
 </body>
 ```
+
+---
+
+---
 
 ## Retrieving the collection of child nodes
 
@@ -142,7 +148,9 @@ Here is an example of using `Array.from()` with `childNodes`:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Accessing the child nodes
 
@@ -170,7 +178,9 @@ Here is an example of using `Array.from()` with `childNodes`:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Accessing the sibling nodes
 
@@ -197,7 +207,9 @@ To get the sibling nodes we can use `<node>.nextSibling` and `<node>.previousSib
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Accessing the parent node
 
@@ -222,7 +234,9 @@ To get the sibling nodes we can use `<node>.nextSibling` and `<node>.previousSib
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Working with child elements
 
@@ -246,7 +260,9 @@ To get the element nodes of an element, we can use `<node>.children`.
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Accessing the child elements
 
@@ -269,7 +285,9 @@ To get the element nodes of an element, we can use `<node>.children`.
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Accessing the sibling elements
 
@@ -296,7 +314,9 @@ To get the element nodes of an element, we can use `<node>.children`.
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Accessing the parent element
 
@@ -321,7 +341,9 @@ To get the element nodes of an element, we can use `<node>.children`.
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Accessing the element by its `id`
 
@@ -348,7 +370,9 @@ To get the element nodes of an element, we can use `<node>.children`.
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Table properties
 
@@ -646,7 +670,9 @@ We can also select the individual cells, and retrieve the number of a cell withi
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Select elements using CSS selectors
 
@@ -679,7 +705,9 @@ Below two DOM methods are very useful. Using these we access the HTML elements u
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Check if an element matches a CSS selector
 
@@ -698,7 +726,9 @@ Below two DOM methods are very useful. Using these we access the HTML elements u
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Select the nearest ancestor that matches a CSS selector
 
@@ -725,7 +755,9 @@ Below two DOM methods are very useful. Using these we access the HTML elements u
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Select the HTML of an element
 
@@ -771,7 +803,9 @@ Below two DOM methods are very useful. Using these we access the HTML elements u
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Select the text of an element
 
@@ -808,7 +842,9 @@ Below two DOM methods are very useful. Using these we access the HTML elements u
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Retrieving the name of an HTML tag or node
 
@@ -846,7 +882,9 @@ Below two DOM methods are very useful. Using these we access the HTML elements u
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Hiding an HTML element
 
@@ -870,7 +908,9 @@ We can hide an element using `<node>.hidden = true`. It is the same as `display:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Input properties
 
@@ -915,7 +955,9 @@ The `<input>` tag has its own specific properties as well.
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Anchor element's `href` property
 
@@ -940,7 +982,9 @@ To get the link of an anchor tag, we can use `<anchorElement>.href`.
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Working with HTML tag attributes
 
@@ -1169,7 +1213,9 @@ To remove an attribute, we can use the `removeNamedItem` from the `NamedNodeMap`
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## The `style` object
 
@@ -1228,6 +1274,10 @@ We can also style an element using `<element>.style.cssText`. This one removes a
 </body>
 ```
 
+---
+
+---
+
 ## Retrieving the style information of an element
 
 To retrieve the style of an element, we can use `getComputedStyle`. This global method is read-only, and we cannot set the style of an element using it:
@@ -1250,7 +1300,9 @@ To retrieve the style of an element, we can use `getComputedStyle`. This global 
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Working with Attributes starting with `data-`
 
@@ -1275,7 +1327,9 @@ To retrieve the style of an element, we can use `getComputedStyle`. This global 
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Creating an HTML element
 
@@ -1293,6 +1347,10 @@ To create an element, we use `document.createElement("<element>")`.
 </body>
 ```
 
+---
+
+---
+
 ## Creating a text node
 
 To create a text node, we use `document.createTextNode("<text>");`
@@ -1309,7 +1367,9 @@ To create a text node, we use `document.createTextNode("<text>");`
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Adding elements to the DOM
 
@@ -1392,7 +1452,9 @@ There are various methods to add elements and nodes to the DOM:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Insert an HTML string with `<element>.insertAdjacentHTML(<where>, <html>)`
 
@@ -1482,11 +1544,17 @@ To insert an HTML string “as html”, with all tags and stuff working, we can 
 </body>
 ```
 
+---
+
+---
+
 ## Insert Text with `<element>.insertAdjacentText(<where>, <text>)`
 
 `<element>.insertAdjacentText(<where>, <text>)` has the same syntax as above but inserts text.
 
-<hr>
+---
+
+---
 
 ## Remove a node from the DOM
 
@@ -1508,7 +1576,9 @@ To remove the node from a DOM, we can use the `remove()` method:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Copy a node
 
@@ -1534,7 +1604,9 @@ We can copy a node using the `cloneNode()` method:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Dealing with HTML Classes
 
@@ -1617,7 +1689,9 @@ There are various properties and methods to work with HTML classes:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Accessing the positioned ancestor of HTML element
 
@@ -1656,6 +1730,10 @@ In some occasions `offsetParent` is `null`:
 </body>
 ```
 
+---
+
+---
+
 ## Retrieving the coordinates of an element relative to `<element>.offsetParent`
 
 - `<element>.offsetLeft` read-only property returns the number of pixels that the upper left corner of the current element is offset within the `<element>.offsetParent`.
@@ -1686,7 +1764,9 @@ In some occasions `offsetParent` is `null`:
 </body>
 ```
 
-<hr>
+---
+
+---
 
 ## Retrieving the width and height of an element
 
@@ -1730,6 +1810,10 @@ To get the content width and height together with paddings including the scrolle
   </script>
 </body>
 ```
+
+---
+
+---
 
 ## Deal with scrolling on a screen
 
@@ -1885,6 +1969,10 @@ These properties are read-only. To scroll the window to a particular place, use 
 </body>
 ```
 
+---
+
+---
+
 ## Retrieve the element size and coordinates with `getBoundingClientRect`
 
 `<element>.getBoundingClientRect()` method returns a `DOMRect` object providing information about the size of an element and its position relative to the viewport. The `left`, `top`, `right`, `bottom`, `x`, `y`, `width`, and `height` properties describe the position and size of the overall rectangle in pixels. Properties other than width and height are relative to the top-left of the viewport. The `width` and `height` properties of the `DOMRect` object returned by the method include the padding and border-width, not only the content width/height.
@@ -1905,6 +1993,10 @@ These properties are read-only. To scroll the window to a particular place, use 
   </script>
 </body>
 ```
+
+---
+
+---
 
 ## Retrieving the element coordinates with `elementFromPoint`
 
@@ -1936,5 +2028,6 @@ These properties are read-only. To scroll the window to a particular place, use 
 </body>
 ```
 
-<hr>
-<hr>
+---
+
+---
