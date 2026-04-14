@@ -33,7 +33,9 @@
 </script>
 ```
 
-<hr>
+---
+
+---
 
 ## `form.elements`
 
@@ -52,11 +54,13 @@ There is `form.elements` which helps us access any form element:
 </script>
 ```
 
-<hr>
+---
 
 When there are multiple elements with the same name, then `<form>.elements["<nameOfTheFormElement>"]` is a collection as well. In that case, we can access elements like this: `<form>.elements.<nameOfTheFormElement>[0]`.
 
-<hr>
+---
+
+---
 
 ## `<fieldset>`
 
@@ -67,7 +71,9 @@ When there are multiple elements with the same name, then `<form>.elements["<nam
 <form>.elements.<someFieldsetName>.elements[0];
 ```
 
-<hr>
+---
+
+---
 
 ## `<element>.form`
 
@@ -81,7 +87,9 @@ document.forms[0].elements.textarea.value = "New text";
 document.forms[0].elements.input.checked = true; // for a checkbox or radio button
 ```
 
-<hr>
+---
+
+---
 
 ## `<select>` element
 
@@ -121,11 +129,14 @@ const option1 = new Option("Text", "value");
 const option2 = new Option("Text", "value", true, true);
 ```
 
-<hr>
+---
+
+---
 
 ## submit a form to a server manually
 
 To submit a form to the server manually, we can call `<form>.submit()`
 
-<hr>
-<hr>
+---
+
+---
