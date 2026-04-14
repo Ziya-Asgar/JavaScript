@@ -8,6 +8,8 @@
 
 ---
 
+---
+
 ## `try...catch()`, and properties of an error object
 
 To handle the errors, we can use `try...catch()` or `try...catch()...finally` block. For all built-in errors, the error object has two main properties: `name`, and `message`. There are other non-standard properties available in the most environments. One of the most widely used and supported is `stack`:
@@ -41,7 +43,9 @@ try {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## `try...catch()` and asynchronous code
 
@@ -57,7 +61,9 @@ setTimeout(function () {
 }, 1000);
 ```
 
-<hr>
+---
+
+---
 
 ## `catch` without parentheses
 
@@ -73,7 +79,9 @@ try {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## `throw` operator and different built-in error constructors
 
@@ -95,5 +103,6 @@ try {
 }
 ```
 
-<hr>
-<hr>
+---
+
+---
