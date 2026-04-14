@@ -55,7 +55,9 @@ fetch(url)
   .catch((error) => console.error(error));
 ```
 
-<hr>
+---
+
+---
 
 ## POST request
 
@@ -79,7 +81,9 @@ fetch(postUrl, {
   .catch((err) => console.error(err));
 ```
 
-<hr>
+---
+
+---
 
 ## Fetch and HTTP status codes
 
@@ -102,7 +106,9 @@ fetch(url)
   .catch((error) => console.error(error));
 ```
 
-<hr>
+---
+
+---
 
 ## Headers
 
@@ -161,7 +167,9 @@ fetch("https://example.com/api/users", {
   .catch((error) => console.error(error));
 ```
 
-<hr>
+---
+
+---
 
 ## Cancel a fetch request
 
@@ -233,5 +241,6 @@ controller.abort();
 
 When a `fetch` is aborted, its promise rejects with an error `AbortError`.
 
-<hr>
-<hr>
+---
+
+---
