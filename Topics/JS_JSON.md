@@ -6,6 +6,8 @@
 
 ---
 
+---
+
 ## `JSON.stringify()`
 
 `JSON.stringify(value[, replacer, space])` method converts a JavaScript value to a JSON string, optionally replacing values if a replacer function is specified or optionally including only the specified properties if a replacer array is specified.
@@ -47,7 +49,7 @@ const json = JSON.stringify(obj, replacer);
 console.log(json); // {"key3":3,"key5":5
 ```
 
-<hr>
+---
 
 Be careful with circular references. Use the replacer in `JSON.stringify()`:
 
@@ -94,7 +96,9 @@ console.log(json);
 // {"title":"Conference","participants":[{"name":"John"},{"name":"Alice"}],"place":{"number":23}}
 ```
 
-<hr>
+---
+
+---
 
 ## `JSON.parse()`
 
@@ -120,5 +124,6 @@ console.log(obj);
 // {title: 'Conference', date: Thu Nov 30 2017 04:00:00 GMT-0800 (Pacific Standard Time)}
 ```
 
-<hr>
-<hr>
+---
+
+---
