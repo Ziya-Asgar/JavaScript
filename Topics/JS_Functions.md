@@ -17,6 +17,8 @@
 
 ---
 
+---
+
 ## Creating a function
 
 There are several ways to create a function:
@@ -95,7 +97,9 @@ console.log(multilineArrowFunction);
    console.log(functionName(1, 2)); // 3
    ```
 
-<hr>
+---
+
+---
 
 ## Set a default value to a parameter in a function
 
@@ -115,7 +119,9 @@ declaration(10);
 declaration(10, 20);
 ```
 
-<hr>
+---
+
+---
 
 ## Access all arguments of a function
 
@@ -163,7 +169,7 @@ console.log(twoParametersAndTheRest(1, 2, 3, 4, 5));
 // finally, returns [3, 4, 5]
 ```
 
-<hr>
+---
 
 `arguments` is a keyword to access all the arguments provided to a function:
 
@@ -183,7 +189,9 @@ accessingAllArguments(1, 2);
 // 2 is the number of arguments called with the function
 ```
 
-<hr>
+---
+
+---
 
 ## Using the spread operator inside a function
 
@@ -199,7 +207,9 @@ callWith3Dots([3, 5, 8]);
 // returns 8
 ```
 
-<hr>
+---
+
+---
 
 ## Get the number of parameters of a function
 
@@ -213,7 +223,9 @@ console.log(functionWith2Parameters.length); // returns 2
 console.log(functionWithManyParameters.length); // still returns 2
 ```
 
-<hr>
+---
+
+---
 
 ## Returns from a function
 
@@ -242,7 +254,9 @@ function emptyReturnGivesUndefined() {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## Copying a function
 
@@ -258,7 +272,9 @@ func1(); // copied
 func2(); // copied
 ```
 
-<hr>
+---
+
+---
 
 ## Add a property to a function from outside
 
@@ -272,7 +288,9 @@ withExternalProperty.addedExternally = `you can add a property to a function fro
 console.log(withExternalProperty.addedExternally);
 ```
 
-<hr>
+---
+
+---
 
 ## `setTimeout()` and `clearTimeout()`
 
@@ -320,7 +338,9 @@ const functionName = function (arg1, arg2) {
 const timerId = setTimeout(functionName, 1000, `argument1`, `argument2`);
 ```
 
-<hr>
+---
+
+---
 
 ## `setInterval()` and `clearInterval()`, and nested `setTimeout()`
 
@@ -372,7 +392,9 @@ const timerID = setTimeout(function tick() {
 }, 1000);
 ```
 
-<hr>
+---
+
+---
 
 ## `.call()`, `.apply()`, `.bind()`
 
@@ -455,7 +477,9 @@ bindedFn(); // 99, "argument"
 > - `.apply()`: binds `this` keyword value, **invokes the function**, and allows you to pass arguments as an **array**.
 > - `.bind()`: binds `this` keyword value, **returns** a new function, and allows you to pass **a list of arguments**.
 
-<hr>
+---
+
+---
 
 ## `eval()`
 
@@ -472,7 +496,9 @@ const evalReturnsLastValue = eval(`let i = 0; ++i`);
 console.log(evalReturnsLastValue); // 1
 ```
 
-<hr>
+---
+
+---
 
 ## Currying
 
@@ -492,5 +518,6 @@ let addFive = add(5);
 console.log(addFive(3)); // 8
 ```
 
-<hr>
-<hr>
+---
+
+---
