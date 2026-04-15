@@ -26,7 +26,7 @@ function* generatorFunc() {
 }
 ```
 
-<hr>
+---
 
 When a generator function is called, it doesn’t run its code. It returns a special object, called “generator object”, to manage the execution.
 
@@ -41,7 +41,9 @@ const generator = generatorFunc();
 console.log(generator); // // [object Generator]
 ```
 
-<hr>
+---
+
+---
 
 ## `next()`
 
@@ -66,7 +68,9 @@ console.log(generator.next()); // {value: 3, done: true}
 
 After the final return value is reached, if the `next()` method is used again, it will return `{value: undefined, done: true}`.
 
-<hr>
+---
+
+---
 
 ## Looping over generators
 
@@ -104,7 +108,9 @@ for (let value of generator) {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## Spread syntax with generators
 
@@ -125,7 +131,9 @@ const arrFilledByGenerator = [0, ...generator];
 console.log(arrFilledByGenerator); // [0, 1, 2]
 ```
 
-<hr>
+---
+
+---
 
 ## Generator in a generator
 
@@ -146,7 +154,9 @@ console.log(generator.next()); // { value: 40, done: false }
 console.log(generator.next()); // { value: 41, done: false }
 ```
 
-<hr>
+---
+
+---
 
 ## Passing an argument to a generator
 
@@ -166,7 +176,9 @@ generator.next(4); // 4 passed inside and becomes the result, after which it is 
 
 The first call `generator.next()` should always be made without an argument. The argument is ignored if passed.
 
-<hr>
+---
+
+---
 
 ## Pass an error to the generator
 
@@ -188,7 +200,9 @@ generator.next().value;
 generator.throw(new Error("Custom Error message"));
 ```
 
-<hr>
+---
+
+---
 
 ## Finishing a generator early
 
@@ -210,5 +224,6 @@ console.log(generator.return("The End")); // { value: "The End", done: true }
 console.log(generator.next()); // { value: undefined, done: true }
 ```
 
-<hr>
-<hr>
+---
+
+---
