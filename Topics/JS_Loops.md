@@ -10,6 +10,8 @@
 
 ---
 
+---
+
 ## `while()`
 
 An example for the `while()` loop:
@@ -22,6 +24,10 @@ while (condition < 3) {
   condition++;
 } // 1 2
 ```
+
+---
+
+---
 
 ## `while` with `break`
 
@@ -37,6 +43,10 @@ while (condition < 3) {
 } // 1
 ```
 
+---
+
+---
+
 ## `while()` loop on a single line
 
 We can write a `while()` loop on one line:
@@ -47,7 +57,9 @@ let condition = 1;
 while (condition < 3) console.log(condition++);
 ```
 
-<hr>
+---
+
+---
 
 ## `do...while()`
 
@@ -62,7 +74,9 @@ do {
 } while (condition < 1);
 ```
 
-<hr>
+---
+
+---
 
 ## `for()`
 
@@ -93,7 +107,9 @@ for (; condition < 3; ) {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## Named `for` loop
 
@@ -123,5 +139,6 @@ outerLoop: for (let i = 0; i < 3; i++) {
 }
 ```
 
-<hr>
-<hr>
+---
+
+---
