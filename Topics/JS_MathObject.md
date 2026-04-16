@@ -14,11 +14,15 @@
 
 ---
 
+---
+
 ## `Math.random()`
 
 `Math.random()` returns a number between 0 and 1 (exclusive).
 
-<hr>
+---
+
+---
 
 ## `Math.max()`
 
@@ -28,6 +32,10 @@
 Math.max(2, 6, 8); // 8
 ```
 
+---
+
+---
+
 ## `Math.min()`
 
 `Math.min()` returns the minimum number from provided arguments.
@@ -36,7 +44,9 @@ Math.max(2, 6, 8); // 8
 Math.min(2, 6, 8); // 2
 ```
 
-<hr>
+---
+
+---
 
 ## `Math.pow()`
 
@@ -46,13 +56,17 @@ Math.min(2, 6, 8); // 2
 Math.pow(5, 2); // 25
 ```
 
-<hr>
+---
+
+---
 
 ## `Math.PI`
 
 `Math.PI` returns the number Pi.
 
-<hr>
+---
+
+---
 
 ## `Math.trunc()`
 
@@ -62,6 +76,10 @@ Math.pow(5, 2); // 25
 Math.trunc(Math.PI); // 3
 ```
 
+---
+
+---
+
 ## `Math.round()`
 
 `Math.round()` rounds a number to the nearest integer:
@@ -69,6 +87,10 @@ Math.trunc(Math.PI); // 3
 ```js
 Math.round(3.5); // 4
 ```
+
+---
+
+---
 
 ## `Math.ceil()`
 
@@ -78,6 +100,10 @@ Math.round(3.5); // 4
 Math.ceil(3.1); // 4
 ```
 
+---
+
+---
+
 ## `Math.floor()`
 
 `Math.floor()` rounds a number down:
@@ -86,7 +112,9 @@ Math.ceil(3.1); // 4
 Math.floor(3.5); // 3
 ```
 
-<hr>
+---
+
+---
 
 ## Supported Math Operations
 
@@ -99,5 +127,6 @@ The following math operations are supported:
 - Remainder `%`,
 - Exponentiation `**`.
 
-<hr>
-<hr>
+---
+
+---
