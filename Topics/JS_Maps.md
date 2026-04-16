@@ -15,6 +15,8 @@
 
 ---
 
+---
+
 ## Create a `Map`
 
 To create a `Map`, we use the `new Map()` syntax:
@@ -23,7 +25,7 @@ To create a `Map`, we use the `new Map()` syntax:
 const map = new Map();
 ```
 
-<hr>
+---
 
 We can create a map from an object:
 
@@ -38,7 +40,7 @@ const mapFromObj = new Map(Object.entries(obj));
 console.log(mapFromObj); // {'key' => 'value', 'key2' => 'value2'}
 ```
 
-<hr>
+---
 
 We can create a map from an array of arrays:
 
@@ -53,7 +55,9 @@ console.log(map);
 // {'1' => 'str1', 1 => 'num1', true => 'bool1'}
 ```
 
-<hr>
+---
+
+---
 
 ## Add key-value pairs
 
@@ -70,7 +74,9 @@ console.log(map);
 // {'key' => 'value', 1 => 'value', 'another key' => 3, 4 => true}
 ```
 
-<hr>
+---
+
+---
 
 ## Get the value of a specific key
 
@@ -87,7 +93,9 @@ const result = map.get("key");
 console.log(result); // value
 ```
 
-<hr>
+---
+
+---
 
 ## `.has()`
 
@@ -104,7 +112,9 @@ const result = map.has("key");
 console.log(result); // true
 ```
 
-<hr>
+---
+
+---
 
 ## `.size`
 
@@ -120,7 +130,9 @@ const map = new Map([
 console.log(map.size); // 3
 ```
 
-<hr>
+---
+
+---
 
 ## `.keys()`
 
@@ -138,7 +150,9 @@ for (let key of map.keys()) {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## `.values()`
 
@@ -156,7 +170,9 @@ for (let value of map.values()) {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## `.entries()`
 
@@ -188,7 +204,9 @@ for (let entry of map) {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## `.forEach()`
 
@@ -205,7 +223,9 @@ map.forEach((value, key, map) => {
 });
 ```
 
-<hr>
+---
+
+---
 
 ## `.delete()`
 
@@ -224,7 +244,9 @@ map.delete("key");
 console.log(map); // {'another key' => 3, 4 => true}
 ```
 
-<hr>
+---
+
+---
 
 ## `.clear()`
 
@@ -243,5 +265,6 @@ map.clear();
 console.log(map); // {size: 0}
 ```
 
-<hr>
-<hr>
+---
+
+---
