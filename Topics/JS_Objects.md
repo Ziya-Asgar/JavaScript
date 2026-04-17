@@ -31,6 +31,8 @@
 
 ---
 
+---
+
 ## Creating an object
 
 This way of creating an object is called "object constructor" syntax:
@@ -45,7 +47,7 @@ This way of creating an object is called "object literal" syntax:
 const obj = {};
 ```
 
-<hr>
+---
 
 Here is an example of creating an object with a custom constructor function:
 
@@ -61,7 +63,9 @@ console.log(obj); // ConstructorFunction {name: 'some name', someProperty: 'som
 console.log(typeof obj); // object
 ```
 
-<hr>
+---
+
+---
 
 ## Object keys and values, and accessing them
 
@@ -75,7 +79,7 @@ const obj = {
 };
 ```
 
-<hr>
+---
 
 To get the value of an object property, we can use the below ways:
 
@@ -91,7 +95,7 @@ obj["name"];
 obj["multi-word property"];
 ```
 
-<hr>
+---
 
 We can also use string concatenation while referring to or creating an object property:
 
@@ -115,7 +119,7 @@ const obj = {
 console.log(obj["propertyName"]);
 ```
 
-<hr>
+---
 
 Instead of writing `name: name` in an object, we can simply write `name`:
 
@@ -135,7 +139,9 @@ const obj = {
 };
 ```
 
-<hr>
+---
+
+---
 
 ## Delete a key-value pair
 
@@ -154,7 +160,9 @@ delete obj.name;
 console.log(obj); // {age: 30}
 ```
 
-<hr>
+---
+
+---
 
 ## Test if a property exists in an object
 
@@ -173,7 +181,9 @@ delete obj.name;
 console.log("name" in obj); // false
 ```
 
-<hr>
+---
+
+---
 
 ## Looping through object
 
@@ -190,7 +200,9 @@ for (let key in obj) {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## Copy an object
 
@@ -242,7 +254,9 @@ const obj = {
 const copyOfObj = structuredClone(obj);
 ```
 
-<hr>
+---
+
+---
 
 ## optional chaining `?.`
 
@@ -273,7 +287,9 @@ const anotherObj = null;
 console.log(anotherObj?.someProp); // undefined
 ```
 
-<hr>
+---
+
+---
 
 ## `Object.fromEntries()`
 
@@ -300,7 +316,9 @@ console.log(map.entries()); // map iterator
 const obj2 = Object.fromEntries(map.entries());
 ```
 
-<hr>
+---
+
+---
 
 ## `Object.keys()` and `Object.values()`
 
@@ -335,7 +353,9 @@ for (let value of Object.values(obj)) {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## `Object.entries()`
 
@@ -353,7 +373,9 @@ const obj = {
 Object.entries(obj); // returns an array of [key, value] pairs.
 ```
 
-<hr>
+---
+
+---
 
 ## `Object.getOwnPropertyDescriptor()`
 
@@ -371,6 +393,10 @@ const obj = {
 const descriptor = Object.getOwnPropertyDescriptor(obj, "name");
 ```
 
+---
+
+---
+
 ## `Object.getOwnPropertyDescriptors()`
 
 The method `Object.getOwnPropertyDescriptors()` allows to query the full information about **all** the properties of an object, including their flags:
@@ -387,7 +413,9 @@ const obj = {
 const allDescriptors = Object.getOwnPropertyDescriptors(obj);
 ```
 
-<hr>
+---
+
+---
 
 ## `Object.defineProperty`
 
@@ -433,6 +461,10 @@ Object.defineProperty(obj, "newProp", {
 });
 ```
 
+---
+
+---
+
 ## `Object.defineProperties`
 
 To change the flags of several properties at once, we can use `Object.defineProperties`:
@@ -452,7 +484,9 @@ Object.defineProperties(obj, {
 });
 ```
 
-<hr>
+---
+
+---
 
 ## Copy an object together with all of its properties' flags
 
@@ -473,7 +507,9 @@ const copyOfObjectWithFlags = Object.defineProperties(
 );
 ```
 
-<hr>
+---
+
+---
 
 ## `Object.preventExtension()` and `Object.isExtensible()`
 
@@ -489,6 +525,10 @@ We can check if we can add properties to an object using `Object.isExtensible()`
 Object.isExtensible(obj);
 ```
 
+---
+
+---
+
 ## `Object.seal()` and `Object.isSealed()`
 
 `Object.seal()` forbids adding or removing properties. This means that it sets `configurable: false` for all existing properties.
@@ -502,6 +542,10 @@ We can check if an object is sealed, using `Object.isSealed()`:
 ```js
 Object.isSealed(obj);
 ```
+
+---
+
+---
 
 ## `Object.freeze()` and `Object.isFrozen()`
 
@@ -517,7 +561,9 @@ We can check if an object is frozen using `Object.isFrozen()`:
 Object.isFrozen(obj);
 ```
 
-<hr>
+---
+
+---
 
 ## Accessor properties
 
@@ -574,7 +620,9 @@ obj.fullName = "differentName differentSurname";
 console.log(obj.fullName); // differentName differentSurname
 ```
 
-<hr>
+---
+
+---
 
 ## Set the prototype of an object
 
@@ -606,7 +654,7 @@ const anotherChildOfPrototype1 = {
 console.log(anotherChildOfPrototype1.prototypeProp); // prototypeValue
 ```
 
-<hr>
+---
 
 Here is another way to set the prototype of an object:
 
@@ -627,7 +675,7 @@ const obj = new ConstructorFunction("new name");
 console.log(obj.prototypeProp); // true
 ```
 
-<hr>
+---
 
 We can create a new object and provide a prototype for it using the `Object.create()` method:
 
@@ -718,7 +766,9 @@ const powerfulCopyOfObj = Object.create(
 console.log(Object.getPrototypeOf(powerfulCopyOfObj)); // {prototypeValue1: 'prototypeValue1'}
 ```
 
-<hr>
+---
+
+---
 
 ## Add a method to a native prototype
 
@@ -733,7 +783,9 @@ console.log("any string".newMethodToNativePrototype());
 // this adds a method to the native String prototype
 ```
 
-<hr>
+---
+
+---
 
 ## `.isPrototypeOf()`
 
@@ -766,7 +818,9 @@ console.log(Prototype1.isPrototypeOf(Child1)); // true
 console.log(Prototype3.isPrototypeOf(Child1)); // false
 ```
 
-<hr>
+---
+
+---
 
 ## Looping and prototypes
 
@@ -827,7 +881,7 @@ for (let key in Child1) {
 }
 ```
 
-<hr>
+---
 
 ### `Object.getOwnPropertyNames()`
 
@@ -847,5 +901,6 @@ Object.setPrototypeOf(Child1, Prototype1);
 console.log(Object.getOwnPropertyNames(Child1)); // ['childValue1']
 ```
 
-<hr>
-<hr>
+---
+
+---
