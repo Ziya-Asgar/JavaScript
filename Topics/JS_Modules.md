@@ -24,7 +24,9 @@
 - Modules always work in strict mode.
 - Each module has its own top-level scope. In other words, top-level variables and functions from a module are not seen in other scripts. Modules should `export` what they want to be accessible from outside and `import` what they need.
 
-<hr>
+---
+
+---
 
 ## `import.meta`
 
@@ -41,7 +43,9 @@ Its content depends on the environment. In the browser, it contains the URL of t
 
 If you are using the `import.meta` inside a JS file, make sure that the `script` tag, within the html file, referring to the JS file include `type="module"`. Otherwise, an error will pop up saying "Cannot use `'import.meta'` outside a module.
 
-<hr>
+---
+
+---
 
 ## `this` in modules
 
@@ -57,7 +61,9 @@ In a module, top-level `this` is undefined. In non-module scripts, `this` is a g
 </script>
 ```
 
-<hr>
+---
+
+---
 
 ## Browser-specific differences of scripts with `type="module"`
 
@@ -92,7 +98,9 @@ Compare to regular script below:
 
 - For non-module scripts, the `async` attribute only works on external scripts. Async scripts run immediately when ready, independently of other scripts or the HTML document. For module scripts, it works on inline scripts as well.
 
-<hr>
+---
+
+---
 
 ## Fallback for old browsers
 
@@ -113,7 +121,9 @@ Old browsers do not understand `type="module"`. Scripts of an unknown type are j
 </script>
 ```
 
-<hr>
+---
+
+---
 
 ## Exporting and importing variables
 
@@ -219,7 +229,9 @@ say.hi("Ziya"); // Hello, Ziya!
 say.bye("Ziya"); // Bye, Ziya!
 ```
 
-<hr>
+---
+
+---
 
 ## `export default`
 
@@ -322,7 +334,9 @@ const ClassName = obj.default; // the default export
 console.log(new ClassName("Ziya").name);
 ```
 
-<hr>
+---
+
+---
 
 ## Re-export
 
@@ -353,7 +367,9 @@ export * from "./module.js"; // to re-export named exports
 export { default } from "./module.js"; // to re-export the default export
 ```
 
-<hr>
+---
+
+---
 
 ## Dynamic imports
 
@@ -399,5 +415,6 @@ const condition = true;
 })();
 ```
 
-<hr>
-<hr>
+---
+
+---
