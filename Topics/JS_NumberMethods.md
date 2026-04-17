@@ -11,6 +11,8 @@
 
 ---
 
+---
+
 ## `.toFixed()`
 
 `toFixed([<decimal place>])` method rounds a number to given (optional) decimal places:
@@ -22,7 +24,9 @@ num.toFixed(); // 123457, rounds to 0 decimal places
 num.toFixed(2); // 123456.79, rounds to 2 decimal places
 ```
 
-<hr>
+---
+
+---
 
 ## define numbers using `e`
 
@@ -33,7 +37,9 @@ const thousand = 1e3; // same as 1000 (10^3)
 const oneThousandth = 1e-3; // same as 1/1000
 ```
 
-<hr>
+---
+
+---
 
 ## `isNaN()` and `Number.isNaN()`
 
@@ -63,7 +69,9 @@ Number.isNaN(halfNum); // false. halfNum is not NaN
 Number.isNaN(NaN); // true. NaN is NaN
 ```
 
-<hr>
+---
+
+---
 
 ## `isFinite()` and `Number.isFinite()`
 
@@ -87,7 +95,9 @@ Number.isFinite(Infinity); // false
 Number.isFinite(-Infinity); // false
 ```
 
-<hr>
+---
+
+---
 
 ## `Number.isInteger()`
 
@@ -104,7 +114,9 @@ Number.isInteger(true); // false
 Number.isInteger(false); // false
 ```
 
-<hr>
+---
+
+---
 
 ## `parseInt()` and `Number.parseInt()`
 
@@ -122,7 +134,9 @@ Number.parseInt("12.3.4"); // 12
 Number.parseInt(halfNum); // 45
 ```
 
-<hr>
+---
+
+---
 
 ## `parseFloat()` and `Number.parseFloat()`
 
@@ -140,5 +154,6 @@ Number.parseFloat("12.3.4"); // 12.3
 Number.parseFloat(halfNum); // 45.34
 ```
 
-<hr>
-<hr>
+---
+
+---
