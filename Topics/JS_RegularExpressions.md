@@ -63,7 +63,9 @@ const regexp = /pattern/gim; // with flags g,m and i
 
 You should use a regex literal when you know the regular expression pattern at the time of writing the code. On the other hand, use the `RegExp` constructor if the regex pattern is to be created dynamically. Also, the regex constructor lets you write a pattern using a template literal, but this is not possible with the regex literal syntax.
 
-<hr>
+---
+
+---
 
 ## Flags
 
@@ -76,7 +78,9 @@ There are 6 flags in JavaScript's Regular Expressions:
 - `m` - Multiline mode
 - `y` - “Sticky” mode: searching at the exact position in the text
 
-<hr>
+---
+
+---
 
 ## Regular Expression methods
 
@@ -240,7 +244,9 @@ console.log(regexp.test("Hello there")); // true
 console.log(regexp.test("Hi there")); // false
 ```
 
-<hr>
+---
+
+---
 
 ## Character classes
 
@@ -310,7 +316,9 @@ const phoneNumber = "+1(234)-567-89-01";
 console.log(phoneNumber.replace(/\D/g, "")); // 12345678901
 ```
 
-<hr>
+---
+
+---
 
 ## Using dot `.`
 
@@ -338,7 +346,9 @@ If we want the dot `.` to include the newline character `\n` as well, then we ca
 console.log("A\nB".match(/A.B/s)); // Array [ "A\nB" ]
 ```
 
-<hr>
+---
+
+---
 
 ## Unicode encoding and `u` flag
 
@@ -409,7 +419,9 @@ Here are links to learn more about Unicode
 - Short aliases for properties: https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt.
 - A full base of Unicode characters in text format, with all properties, is here: https://www.unicode.org/Public/UCD/latest/ucd/.
 
-<hr>
+---
+
+---
 
 ## Anchors: string start `^` and end `$`
 
@@ -464,7 +476,9 @@ console.log(str.match(/\d$/gm)); // Array(3) [ "1", "2", "3" ]
 console.log(str.match(/\d$/g)); // Array [ "3" ]
 ```
 
-<hr>
+---
+
+---
 
 ## Word boundary: `\b`
 
@@ -490,7 +504,9 @@ console.log("12,34,56".match(/\b\d\d\b/g)); // Array(3) [ "12", "34", "56" ]
 
 The word boundary test `\b` checks that there should be `\w `on the one side from the position and "not `\w`" – on the other side. But `\w `means a latin letter a-z (or a digit or an underscore), so the test doesn’t work for other characters, e.g. cyrillic letters or hieroglyphs.
 
-<hr>
+---
+
+---
 
 ## Escaping Special characters
 
@@ -546,7 +562,9 @@ const regexp = new RegExp(regStr);
 console.log("Chapter 5.1".match(regexp)); // 5.1
 ```
 
-<hr>
+---
+
+---
 
 ## Sets and ranges
 
@@ -604,7 +622,9 @@ In square brackets, we can use the vast majority of special characters without e
 
 But if you decide to escape them just in case, then it won't be a problem.
 
-<hr>
+---
+
+---
 
 ## Quantifiers `+`, `\*`, `?` and `{<number>}`
 
@@ -655,7 +675,9 @@ Instead of writing something as `{0,}`, we can use the shorthand `*`. `*` means 
 console.log("100 10 1".match(/\d0*/g)); // Array(3) [ "100", "10", "1" ]
 ```
 
-<hr>
+---
+
+---
 
 ## Greedy and lazy quantifiers
 
@@ -696,7 +718,9 @@ const str = 'a "witch" and her "broom" is one';
 console.log(str.match(regexp)); // Array [ '"witch"', '"broom"' ]
 ```
 
-<hr>
+---
+
+---
 
 ## Capturing groups
 
@@ -839,7 +863,9 @@ console.log(result[1]); // John
 console.log(result.length); // 2 (no more items in the array)
 ```
 
-<hr>
+---
+
+---
 
 ## Backreferences in pattern: `\N` and `\k<name>`
 
@@ -866,7 +892,9 @@ const regexp = /(?<quote>['"])(.*?)\k<quote>/g;
 console.log(str.match(regexp)); // Array [ `"She's the one!"` ]
 ```
 
-<hr>
+---
+
+---
 
 ## Alternation (OR) `|`
 
@@ -907,7 +935,9 @@ const regexp = /([01]\d|2[0-3]):[0-5]\d/g;
 console.log("00:00 10:10 23:59 25:99 1:2".match(regexp)); // Array(3) [ "00:00", "10:10", "23:59" ]
 ```
 
-<hr>
+---
+
+---
 
 ## Lookahead and lookbehind
 
@@ -981,13 +1011,17 @@ console.log(str.match(regexp1)); // Array [ "30" ]
 console.log(str.match(regexp2)); // Array [ "30", "$" ]
 ```
 
-<hr>
+---
+
+---
 
 ## Catastrophic backtracking
 
 We mentioned that to turn from the greedy search mode to the lazy mode, we need to `?` after a quantifier. But in some situations, we might want to keep the greedy search mode, but get rid of the backtracking. To stop the backtracking, we add `+` after a quantifier. That is, we use `\d++` instead of `\d+` to stop `+` from backtracking. With one more `+`, the quantifier, in this example `\d++`, becomes a **possessive quantifier**. Possessive quantifiers are in fact simpler than “regular” ones. They just match as many as they can, without any backtracking. The search process without backtracking is simpler.
 
-<hr>
+---
+
+---
 
 ## Sticky flag `y`, searching at position
 
@@ -1054,7 +1088,9 @@ regexp.lastIndex = 4;
 console.log(regexp.exec(str)); // Array [ "varName" ] (word at position 4)
 ```
 
-<hr>
+---
+
+---
 
 ## Methods of RegExp and String
 
@@ -1072,7 +1108,9 @@ const str = "A drop of ink may make a million think";
 console.log(str.search(/ink/i)); // 10 (first match position
 ```
 
-<hr>
+---
+
+---
 
 ## Summary of Regular Expressions
 
@@ -1286,5 +1324,6 @@ console.log(longStr.match(/".*?"/gi)); // Array(3) [ '"like"', '"symbols"', '"sy
 // exec with lastIndex and flag y
 ```
 
-<hr>
-<hr>
+---
+
+---
