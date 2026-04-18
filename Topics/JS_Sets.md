@@ -12,6 +12,8 @@
 
 ---
 
+---
+
 ## Create a `Set`
 
 To create a `Set`, we use the `new Set()` syntax:
@@ -28,7 +30,9 @@ const set = new Set(["value1", "value1", "value2", "value3"]);
 console.log(set); // Set(3) {'value1', 'value2', 'value3'}
 ```
 
-<hr>
+---
+
+---
 
 ## Add items to a set
 
@@ -41,7 +45,9 @@ set.add("value");
 set.add({ name: "some name" });
 ```
 
-<hr>
+---
+
+---
 
 ## `.has()`
 
@@ -58,7 +64,9 @@ const result = set.has("value");
 console.log(result); // true
 ```
 
-<hr>
+---
+
+---
 
 ## `.size`
 
@@ -75,7 +83,9 @@ const result = set.size;
 console.log(result); // 2
 ```
 
-<hr>
+---
+
+---
 
 ## Loop over the set items
 
@@ -90,7 +100,9 @@ set.add({ name: "some name" });
 for (let item of set) console.log(item);
 ```
 
-<hr>
+---
+
+---
 
 ## `.forEach()`
 
@@ -107,7 +119,9 @@ set.forEach((value, valueAgain, set) => {
 });
 ```
 
-<hr>
+---
+
+---
 
 ## `.delete()`
 
@@ -122,6 +136,10 @@ set.add({ name: "some name" });
 set.delete("value");
 ```
 
+---
+
+---
+
 ## `.clear()`
 
 `.clear()` method deletes all the key-value pairs from a set:
@@ -135,7 +153,7 @@ set.add({ name: "some name" });
 set.clear();
 ```
 
-<hr>
+---
 
 The same methods Map has for iterators are also supported with Set:
 
@@ -151,5 +169,6 @@ for (let value of set.values()) console.log(value);
 for (let entry of set.entries()) console.log(entry);
 ```
 
-<hr>
-<hr>
+---
+
+---
