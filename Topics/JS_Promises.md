@@ -55,7 +55,9 @@ const promise = new Promise(function (resolve, reject) {
 );
 ```
 
-<hr>
+---
+
+---
 
 ## Internal properties of a returned promise object
 
@@ -100,6 +102,10 @@ promise.then(
 );
 ```
 
+---
+
+---
+
 ## `.then` without catching the promise rejection
 
 `.then` accepts 2 functions: one to handle the result from a resolved promise, and the second one to handle the promise rejection. However, we can also use `.then` with one function alone, if we don't want to control for a possible error:
@@ -113,6 +119,10 @@ promise.then(function (result) {
   console.log(`result is ${result}`);
 });
 ```
+
+---
+
+---
 
 ## Chained `then`s
 
@@ -131,6 +141,10 @@ const promise = new Promise(function (resolve, reject) {
     );
   });
 ```
+
+---
+
+---
 
 ## Controlling for errors using `.then`
 
@@ -160,6 +174,10 @@ promise.catch(
     console.log(`error: ${error}`);
 );
 ```
+
+---
+
+---
 
 ## `.then` after `.catch`
 
@@ -198,6 +216,10 @@ const promise = new Promise((resolve, reject) => {
   });
 ```
 
+---
+
+---
+
 ## `finally`
 
 `finally` always runs, and it shouldn't return anything. If it returns something, it will be ignored.
@@ -218,7 +240,9 @@ const promise = new Promise(function (resolve, reject) {
   });
 ```
 
-<hr>
+---
+
+---
 
 ## A promise inside a promise
 
@@ -239,7 +263,9 @@ const promise = new Promise(function (resolve, reject) {
   });
 ```
 
-<hr>
+---
+
+---
 
 ## `Promise.all`
 
@@ -287,7 +313,9 @@ Promise.all([
 ]).then(console.log); // 1, 2, 3
 ```
 
-<hr>
+---
+
+---
 
 ## `Promise.allSettled`
 
@@ -308,7 +336,9 @@ const arrOfPromises = [
 Promise.allSettled(arrOfPromises).then(console.log);
 ```
 
-<hr>
+---
+
+---
 
 ## `Promise.race()`
 
@@ -326,7 +356,9 @@ const arrOfPromises = [
 Promise.race(arrOfPromises).then(console.log);
 ```
 
-<hr>
+---
+
+---
 
 ## `Promise.any`
 
@@ -349,7 +381,9 @@ Promise.any(arrOfPromises)
   });
 ```
 
-<hr>
+---
+
+---
 
 ## `async`/`await`
 
@@ -387,5 +421,6 @@ async function asyncFunc() {
 asyncFunc();
 ```
 
-<hr>
-<hr>
+---
+
+---
