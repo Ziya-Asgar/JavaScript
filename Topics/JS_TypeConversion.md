@@ -18,6 +18,10 @@
 typeof String(10); // string
 ```
 
+---
+
+---
+
 ## `Number()`
 
 `Number()` turns the provided argument into a number:
@@ -34,6 +38,10 @@ As well as adding numbers, `+` operator, can be used to convert a variable to a 
 typeof +"10"; // number
 ```
 
+---
+
+---
+
 ## `Boolean()`
 
 `Boolean()` turns the provided argument to either `true` or `false`:
@@ -43,5 +51,6 @@ Boolean(" "); // true
 Boolean(""); // false
 ```
 
-<hr>
-<hr>
+---
+
+---
