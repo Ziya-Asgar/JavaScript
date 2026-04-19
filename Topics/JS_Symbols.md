@@ -13,6 +13,8 @@
 
 ---
 
+---
+
 ## Create a `Symbol()`
 
 Here is how to create a `Symbol()`.
@@ -23,7 +25,7 @@ const id = Symbol();
 console.log(id); // Symbol()
 ```
 
-<hr>
+---
 
 Note that 2 different symbols do not equal each other, even if they have the same description:
 
@@ -38,7 +40,9 @@ console.log(id1 == id2); // false
 console.log(id1 === id2); // false
 ```
 
-<hr>
+---
+
+---
 
 ## `description` property
 
@@ -50,7 +54,9 @@ const id = Symbol("test");
 console.log(id.description); // test
 ```
 
-<hr>
+---
+
+---
 
 ## Converting symbols to a string
 
@@ -63,7 +69,9 @@ console.log(String(id)); // Symbol(id)
 console.log(id.toString()); // Symbol(id)
 ```
 
-<hr>
+---
+
+---
 
 ## Symbols in an object literal
 
@@ -80,7 +88,9 @@ const obj = {
 console.log(obj); // {name: 'some name', Symbol(id): 123}
 ```
 
-<hr>
+---
+
+---
 
 ## Symbol properties and looping
 
@@ -101,7 +111,9 @@ for (key in obj) {
 console.log(Object.keys(obj)); // ['name']
 ```
 
-<hr>
+---
+
+---
 
 ## `Object.getOwnPropertySymbols()`
 
@@ -118,7 +130,9 @@ const obj = {
 console.log(Object.getOwnPropertySymbols(obj)); // [Symbol(id)]
 ```
 
-<hr>
+---
+
+---
 
 ## `Object.assign()` and symbols
 
@@ -137,7 +151,9 @@ const copyWithSymbols = Object.assign({}, obj);
 console.log(copyWithSymbols[id]); // 123
 ```
 
-<hr>
+---
+
+---
 
 ## `Symbol.for()`
 
@@ -153,7 +169,9 @@ const idGlobal2 = Symbol.for("id");
 console.log(idGlobal === idGlobal2); //true
 ```
 
-<hr>
+---
+
+---
 
 ## `Symbol.keyFor()`
 
@@ -169,5 +187,6 @@ console.log(Symbol.keyFor(sym)); // name
 console.log(Symbol.keyFor(sym2)); // id
 ```
 
-<hr>
-<hr>
+---
+
+---
