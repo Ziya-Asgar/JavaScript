@@ -15,7 +15,9 @@
   - [`.trim()`](#trim)
   - [Looping through strings](#looping-through-strings)
 
-<hr>
+---
+
+---
 
 ## Define a string and access characters
 
@@ -25,7 +27,7 @@ Here is an easy way to define a string:
 const str = `This is a string`;
 ```
 
-<hr>
+---
 
 Accessing different characters of a string:
 
@@ -39,7 +41,9 @@ str.at(0); // default is zero. T
 str.charAt(); // default is zero. T
 ```
 
-<hr>
+---
+
+---
 
 ## Turning the string into upper or lower case
 
@@ -53,7 +57,9 @@ str.toUpperCase(); // THIS IS A STRING
 str.toLowerCase(); // this is a string
 ```
 
-<hr>
+---
+
+---
 
 ## `.length`
 
@@ -65,7 +71,9 @@ const str = `This is a string`;
 str.length; // 16
 ```
 
-<hr>
+---
+
+---
 
 ## `.indexOf()`
 
@@ -81,7 +89,9 @@ str.indexOf("is", 3); // 5
 str.indexOf("is", 6); // -1
 ```
 
-<hr>
+---
+
+---
 
 ## `.lastIndexOf()`
 
@@ -95,7 +105,9 @@ str.lastIndexOf("is"); // 5
 str.lastIndexOf("is", 4); // 2
 ```
 
-<hr>
+---
+
+---
 
 ## `.includes()`
 
@@ -108,7 +120,9 @@ str.includes("is"); // true
 str.includes("is", 6); // false
 ```
 
-<hr>
+---
+
+---
 
 ## `.startsWith()`, `.endsWith()`
 
@@ -130,7 +144,9 @@ str.endsWith("string"); // true
 str.endsWith("String"); // false
 ```
 
-<hr>
+---
+
+---
 
 ## `.slice()`
 
@@ -148,7 +164,9 @@ str.slice(-6); // string
 str.slice(5, 2); // nothing is returned, as the end position number is smaller than the start position number
 ```
 
-<hr>
+---
+
+---
 
 ## `.substring()`
 
@@ -165,7 +183,9 @@ str.substring(9, 2); // is is a.
 str.substring(-5, -2); // nothing is returned
 ```
 
-<hr>
+---
+
+---
 
 ## `.substr()`
 
@@ -182,7 +202,9 @@ str.substr(-4, 4); // ring
 str.substr(-4, -4); // nothing is returned
 ```
 
-<hr>
+---
+
+---
 
 ## `.split()`
 
@@ -198,7 +220,9 @@ str.split(""); // ['T', 'h', 'i', 's', ' ', 'i', 's', ' ', 'a', ' ', 's', 't', '
 str.split("is"); // ['Th', ' ', ' a string']
 ```
 
-<hr>
+---
+
+---
 
 ## `.trim()`
 
@@ -210,7 +234,9 @@ const sentence = "   JavaScript is amazing!   ";
 console.log(sentence.trim()); // JavaScript is amazing!
 ```
 
-<hr>
+---
+
+---
 
 ## Looping through strings
 
@@ -232,4 +258,6 @@ for (let charIndex = 0; charIndex < str.length; charIndex++) {
 }
 ```
 
-<hr>
+---
+
+---
