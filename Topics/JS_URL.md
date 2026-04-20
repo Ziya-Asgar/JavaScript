@@ -39,7 +39,9 @@ const newUrl = new URL("newPath", url);
 console.log(newUrl.href); // 'https://example.com/path/to/newPath'
 ```
 
-<hr>
+---
+
+---
 
 ## Properties of a `URL` object
 
@@ -64,7 +66,9 @@ console.log("toJSON(): ", newUrl.toJSON()); // toJSON():  https://example.org:80
 
 Generally, the `URL` object can be passed to any method (for example, `fetch`) instead of a string, as most methods will perform the string conversion, that turns a `URL` object into a string with full URL.
 
-<hr>
+---
+
+---
 
 ## `URLSearchParams`
 
@@ -131,7 +135,9 @@ console.log(url.href); // https://example.az/%C6%8F%C3%9C%C4%9E?key=%C3%87
 console.log(url.searchParams); // URLSearchParams { key → "Ç" }
 ```
 
-<hr>
+---
+
+---
 
 ## Functions for encoding and decoding url and url components
 
@@ -171,7 +177,9 @@ console.log(encodeURI(url)); // http://%5B2607:f8b0:4005:802::1007%5D/
 console.log(new URL(url).href); // http://[2607:f8b0:4005:802::1007]/
 ```
 
-<hr>
+---
+
+---
 
 ## `createObjectURL()` and `revokeObjectURL()`
 
@@ -211,5 +219,6 @@ function handler(blob) {
 }
 ```
 
-<hr>
-<hr>
+---
+
+---
