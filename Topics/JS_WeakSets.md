@@ -8,6 +8,8 @@
 
 ---
 
+---
+
 ## Create a `WeakSet`
 
 To create a `WeakSet`, we use the `new WeakSet()` syntax:
@@ -16,7 +18,9 @@ To create a `WeakSet`, we use the `new WeakSet()` syntax:
 const weakSet = new WeakSet();
 ```
 
-<hr>
+---
+
+---
 
 ## Add an item to a weakset
 
@@ -33,7 +37,9 @@ const weakSet = new WeakSet();
 weakSet.add(obj);
 ```
 
-<hr>
+---
+
+---
 
 ## `.has()`
 
@@ -50,7 +56,9 @@ const weakSet = new WeakSet();
 weakSet.has(obj);
 ```
 
-<hr>
+---
+
+---
 
 ## `.delete()`
 
@@ -67,5 +75,6 @@ const weakSet = new WeakSet();
 weakSet.delete(obj);
 ```
 
-<hr>
-<hr>
+---
+
+---
