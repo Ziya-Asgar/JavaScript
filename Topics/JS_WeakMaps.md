@@ -9,6 +9,8 @@
 
 ---
 
+---
+
 ## Create a `WeakMap`
 
 To create a `WeakMap`, we use the `new WeakMap()` syntax:
@@ -17,7 +19,9 @@ To create a `WeakMap`, we use the `new WeakMap()` syntax:
 const weakMap = new WeakMap();
 ```
 
-<hr>
+---
+
+---
 
 ## Add key-value pairs into a weakmap
 
@@ -34,7 +38,9 @@ const obj = {
 weakMap.set(obj, "value1");
 ```
 
-<hr>
+---
+
+---
 
 ## Get the value of a specific key
 
@@ -53,7 +59,9 @@ weakMap.set(obj, "value1");
 console.log(weakMap.get(obj)); // value1
 ```
 
-<hr>
+---
+
+---
 
 ## `.has()`
 
@@ -70,7 +78,9 @@ const obj = {
 weakMap.has(obj);
 ```
 
-<hr>
+---
+
+---
 
 ## `.delete()`
 
@@ -87,5 +97,6 @@ const obj = {
 weakMap.delete(obj); // true
 ```
 
-<hr>
-<hr>
+---
+
+---
