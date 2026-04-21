@@ -297,7 +297,9 @@ window.caches.open("new-cache");
 window.caches.has("new-cache").then((data) => console.log(data)); //true
 ```
 
-<hr>
+---
+
+---
 
 ## `window.clientInformation` or `window.navigator`
 
@@ -382,7 +384,9 @@ To read text from the clipboard, call `navigator.clipboard.readText()` and wait 
 </script>
 ```
 
-<hr>
+---
+
+---
 
 ## `window.history`
 
@@ -467,7 +471,9 @@ setTimeout(() => {
 }, 1000);
 ```
 
-<hr>
+---
+
+---
 
 ## `window.innerHeight` and `window.innerWidth`
 
@@ -480,7 +486,9 @@ console.log(window.innerHeight);
 console.log(window.innerWidth);
 ```
 
-<hr>
+---
+
+---
 
 ## `window.location`
 
@@ -552,7 +560,9 @@ setTimeout(() => {
 
 `location.reload()` reloads the current URL, like the Refresh button.
 
-<hr>
+---
+
+---
 
 ## `window.open()` and `close`
 
@@ -591,7 +601,9 @@ function closeOpenedWindow() {
 
 The `window.closed` read-only property indicates whether the referenced window is closed or not. Returns `true` if the window has been closed or `false` if the window is open.
 
-<hr>
+---
+
+---
 
 ## `window.confirm()`
 
@@ -603,7 +615,9 @@ if (window.confirm("Do you really want to leave?")) {
 }
 ```
 
-<hr>
+---
+
+---
 
 ## `window.getSelection()`
 
@@ -913,5 +927,6 @@ Form elements, such as input and textarea provide special API for selection, wit
 - `"end"` – the selection range collapses just after the inserted text (the cursor will be right after it).
 - `"preserve"` – attempts to preserve the selection. This is the default.
 
-<hr>
-<hr>
+---
+
+---
